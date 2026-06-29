@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+     font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /* Colors */
+    --white-color: #fff;
+    --primary-color: #347827 ;
+    --primary-color-v1: #3c7e30;
+    --primary-color-v2: #2A4E40 ;
+    --secondary-color: #8DC0B7;
+    --light-color-v1: #F9F9ED;
+    --light-color-v2: #DCE6D7;
+    --dark-color:#000;
+    --gray-color:#777;
+    --dark-linear-gradient-color: rgba(17, 21, 36, 0.7);
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --footer-hover-color: rgba(0, 0, 0, 0.7);
+    --image-hover-color: rgba(4, 9, 30, 0.804);
+  
+
+    /* Fonts Sizes */
+    --font-size-s: 0.9rem/* (14.4px) */;
+    --font-size-n: 1rem/* (16px) */;
+    --font-size-m: 1.24rem/* (20px) */;
+    --font-size-l: 1.5rem/* (24px) */;
+    --font-size-xl: 2rem /* (32px) */;
+    --font-size-xxl: 2.3rem /* (36.8px) */;
+    --font-size-hero: 3.125rem /* (50px) */;
+
+    /* Font Weight  */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border Radius */
+    --border-radius-xs: 10px;
+    --border-radius-s: 25px;
+    --border-radius-l: 50px;
+
+    /* Border Radius */
+     --site-max-width: 1100px;
+}
+
+.header{
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+/*-------- Nav Styling --------*/
+nav{
+    display: flex;
+    padding: 0.3% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 200px;
+}
+
+nav .logo-icon{
+   /*  width: auto; */
+    height: 100px;
+}
+
+nav .fa{
+    display: none;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: var(--font-size-n);
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--secondary-color);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+/*-------- Responsive Mobile Styling --------*/
+@media screen and (max-width: 700px){
+    /*---- Nav Styling ----*/
+    .nav-links{
+        position: fixed;
+        background: var(--primary-color-v1);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1000;
+        transition: 1s;
+    }
+
+    .nav-links ul{
+        padding: var(--font-size-xxl);
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    nav .fa{
+        display: block;
+        margin: 10px;
+        font-size: var(--font-size-l);
+        cursor: pointer;
+    }
+
+}
