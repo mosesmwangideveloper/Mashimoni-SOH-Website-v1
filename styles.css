@@ -212,6 +212,39 @@ nav .fa{
     background: transparent;
 }
 
+/*-------- Hero Animations --------*/
+@keyframes slideInLeft{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.hero-col:first-child{
+    animation: slideInLeft 3s ease-out;
+}
+
+.hero-col:last-child{
+    animation: slideInRight 3s ease-out;
+}
+
+
 
 /*-------- Responsive Mobile Styling --------*/
 @media screen and (max-width: 700px){
@@ -302,7 +335,7 @@ nav .fa{
     }
 
     .nav-links ul li a{
-    color: var(--daek-color);
+    color: var(--dark-color);
     font-size: var(--font-size-m);
 }
 
