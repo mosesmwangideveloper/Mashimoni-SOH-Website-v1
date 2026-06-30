@@ -104,6 +104,97 @@ nav .fa{
     width: 100%;
 }
 
+/*-------- Hero Section Styling --------*/
+.hero-section{
+    width: 80%;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+.row-hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.hero-col .hero-image{
+    width: 100%;
+    border-radius: var(--border-radius-xs);
+}
+
+.hero-col .hero-title{
+    padding-top: 0;
+    margin-bottom: 5px;
+    font-size: var(--font-size-n);
+}
+
+.hero-col .hero-sub-title{
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0;
+}
+
+.hero-col .description{
+    text-align: left;
+    margin: auto;
+    font-weight: var(--font-weight-normal);
+    padding: 15px 0 25px;
+    margin: auto;
+}
+
+.hero-buttons{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    padding: 12px 34px;
+    font-size: var(--font-size-s);
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: var(--border-radius-s);
+}
+
+.hero-btn:hover{
+    background: var(--primary-color);
+    color: var(--white-color);
+    transition: 1s ease-in-out;
+}
+
+.side-btn{
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.side-btn:hover{
+    color: var(--dark-color);
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*-------- Responsive Mobile Styling --------*/
 @media screen and (max-width: 700px){
     /*---- Nav Styling ----*/
@@ -133,5 +224,6 @@ nav .fa{
         font-size: var(--font-size-l);
         cursor: pointer;
     }
+
 
 }
