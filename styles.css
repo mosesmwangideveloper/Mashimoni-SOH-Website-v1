@@ -18,7 +18,7 @@
     --dark-color:#000;
     --gray-color:#777;
     --dark-linear-gradient-color: rgba(17, 21, 36, 0.7);
-    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --box-shadow-color: rgba(0, 0, 0, 0.3);
     --footer-hover-color: rgba(0, 0, 0, 0.7);
     --image-hover-color: rgba(4, 9, 30, 0.804);
   
@@ -45,6 +45,13 @@
 
     /* Border Radius */
      --site-max-width: 1100px;
+}
+
+/*-------- Large Screen Styling --------*/
+@media screen and (min-width: 1400px){
+    .hero-section{
+        max-width: var(--site-max-width);
+    }
 }
 
 .header{
@@ -102,6 +109,26 @@ nav .fa{
 
 .nav-links ul li a:hover::after{
     width: 100%;
+}
+
+.overlay{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: var(--box-shadow-color);
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+ opacity: 0;
+ visibility: hidden;
+ transition: 0.4s;
+ z-index: 999;
+}
+
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
 }
 
 /*-------- Hero Section Styling --------*/
@@ -186,15 +213,6 @@ nav .fa{
 }
 
 
-
-
-
-
-
-
-
-
-
 /*-------- Responsive Mobile Styling --------*/
 @media screen and (max-width: 700px){
     /*---- Nav Styling ----*/
@@ -216,6 +234,8 @@ nav .fa{
 
     .nav-links ul li{
         display: block;
+        padding: 10px 0;
+  
     }
 
     nav .fa{
@@ -225,5 +245,96 @@ nav .fa{
         cursor: pointer;
     }
 
+    .hero-section .row-hero{
+        flex-direction: column;
+    }
 
+    .hero-col{
+        margin-bottom: 0;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .hero-btn{
+        width: 100%;
+        text-align: left;
+    }
+
+    .hero-col .hero-title{
+    font-size: var(--font-size-m);
+    }
+
+    .hero-col .hero-sub-title{
+        font-size: var(--font-size-n);
+    }
+
+
+}
+
+
+/*-------- Tablet Styling --------*/
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    /*----- Nav Styling -----*/
+    .nav-links{
+        position: fixed;
+        background: var(--primary-color-v1);
+        height: 100vh;
+        width: 280px;
+        top: 0;
+        right: -280px;
+        text-align: left;
+        z-index: 1000;
+        transition: 1s;
+    }
+
+    .nav-links ul{
+        padding: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a{
+    color: var(--daek-color);
+    font-size: var(--font-size-m);
+}
+
+    nav .fa{
+        display: block;
+        margin: 10px;
+        font-size: var(--font-size-l);
+        cursor: pointer;
+    }
+
+    /*-------- Hero Styling --------*/
+    .hero-col .hero-title{
+        font-size: var(--font-size-m);
+    }
+
+    .hero-section{
+        width: 90%;
+    }
+
+   .hero-col .description{
+    font-size: var(--font-size-s);
+    }
+
+    .hero-btn{
+        padding: 10px 18px;
+        font-size: var(--font-size-s);
+        white-space: nowrap;
+    }
+
+    .hero-buttons{
+        gap: 10px;
+    }
+
+    
 }
