@@ -55,7 +55,6 @@
 }
 
 .header{
-    min-height: 100vh;
     min-width: 100%;
 }
 
@@ -135,9 +134,8 @@ nav .fa{
 .hero-section{
     width: 80%;
     margin: auto;
-    padding-top: 0;
-    padding-bottom: 50px;
-    min-height: 100vh;
+    padding: 30px 0 80px;
+    min-height: unset;
 }
 
 .row-hero{
@@ -148,7 +146,7 @@ nav .fa{
 
 .hero-col{
     flex-basis: 48%;
-    padding: 30px 2px;
+    padding: 20px 2px;
 }
 
 .hero-col .hero-image{
@@ -236,12 +234,107 @@ nav .fa{
 
 }
 
+@keyframes slideInUp{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-col:first-child{
     animation: slideInLeft 3s ease-out;
 }
 
 .hero-col:last-child{
     animation: slideInRight 3s ease-out;
+}
+
+/*-------- Our Services Section ----*/
+.our-services{
+    width: 80%;
+    margin: auto;
+    padding-top: 0;
+    text-align: center;
+}
+
+.row-our-services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 50px;
+
+}
+
+.our-services-col{
+    flex-basis: 31%;
+    margin: 0 15px;
+    border-radius: var(--border-radius-xs);
+    text-align: center;
+}
+
+.our-services-col img{
+    width: 100%;
+    border-radius: var(--border-radius-xs);
+}
+
+.our-services-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.our-services-col p{
+    padding: 0 ;
+    text-align: left;
+}
+
+
+/* ---- Services Cards Slide In Animation ---- */
+.fade-up{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-up.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.our-services-col{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.our-services-col.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay each card slightly so they don't all pop in at once */
+.our-services-col:nth-child(1){
+    transition-delay: 0s;
+}
+.our-services-col:nth-child(2){
+    transition-delay: 0.4s;
+}
+.our-services-col:nth-child(3){
+    transition-delay: 0.8s;
+}
+
+/* Second row gets a longer delay */
+.row-our-services:last-child .our-services-col:nth-child(1){
+    transition-delay: 0s;
+}
+.row-our-services:last-child .our-services-col:nth-child(2){
+    transition-delay: 0.4s;
+}
+.row-our-services:last-child .our-services-col:nth-child(3){
+    transition-delay: 0.8s;
 }
 
 
@@ -306,6 +399,24 @@ nav .fa{
         font-size: var(--font-size-n);
     }
 
+    /*----- Mobile Animation -----*/
+    .hero-col:first-child, .hero-col:last-child{
+        animation: slideInUp 3s ease-out;
+    }
+
+    .hero-col:last-child{
+        animation: slideInUp 3s ease-out 0.2s;
+        animation-fill-mode: backwards;
+    }
+    /*-------- Our Services --------*/
+    .our-services{
+        padding-top: 10px;
+    }
+
+    .row-our-services{
+        flex-direction: column;
+        gap: 20px;
+    }
 
 }
 
@@ -367,6 +478,14 @@ nav .fa{
 
     .hero-buttons{
         gap: 10px;
+    }
+    /*-------- Our Services --------*/
+    .row-our-services{
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+    .our-services-col{
+        flex-basis: 30%;
     }
 
     

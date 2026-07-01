@@ -1,3 +1,4 @@
+// Toggle the navigation menu
 var navLinks = document.getElementById("navLinks");
 var overlay = document.getElementById("overlay");
 
@@ -11,3 +12,15 @@ function hideMenu(){
     overlay.classList.remove("active");
 }
 
+// Slide in animation on scroll for services cards
+const serviceCards = document.querySelectorAll('.our-services-col, .fade-up');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+serviceCards.forEach(card => observer.observe(card));
