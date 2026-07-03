@@ -13,7 +13,7 @@ function hideMenu(){
 }
 
 // Slide in animation on scroll for services cards
-const serviceCards = document.querySelectorAll('.our-services-col, .fade-up');
+const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
