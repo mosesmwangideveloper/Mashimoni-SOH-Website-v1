@@ -10,7 +10,7 @@
     /* Colors */
     --white-color: #fff;
     --primary-color: #347827 ;
-    --primary-color-v1: #3c7e30;
+    --primary-color-v1: #48863d;
     --primary-color-v2: #2A4E40 ;
     --secondary-color: #8DC0B7;
     --light-color-v1: #F9F9ED;
@@ -21,6 +21,8 @@
     --box-shadow-color: rgba(0, 0, 0, 0.3);
     --footer-hover-color: rgba(72, 134, 61, 0.895);
     --image-hover-color: rgba(4, 9, 30, 0.804);
+    --tertiary-color: #fffbe6;
+    
   
 
     /* Fonts Sizes */
@@ -530,10 +532,112 @@ nav .fa{
     background: #24541b;
 }
 
+/*-------- Footer Section  --------*/
+.footer{
+    width: 100%;
+    background: var(--tertiary-color);
+    padding-top: 60px;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 40px;
+    gap: 30px;
+}
+
+.footer-col{
+    flex-basis: 22%;
+    text-align: left;
+}
+
+.footer-logo{
+    width: 150px;
+    margin-bottom: 15px;
+}
+.footer-col h2{
+    color: var(--dark-color);
+    font-size: var(--font-size-m);
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+}
+
+.footer-col p{
+    color: var(--dark-color);
+    font-size: var(--font-size-s);
+    line-height: 1.7;
+}
+
+.footer-col ul li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: var(--font-size-s);
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover{
+    color: var(--primary-color);
+}
+
+.contact-list li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--font-size-s);
+    color: var(--dark-color);
+}
+
+/* .contact-list .fa{
+    color: var(--primary-color);
+    font-size: var(--font-size-m);
+    width: 25px;
+} */
+
+.footer-icons{
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-icons a .fa, .contact-list .fa{
+   background: var(--white-color);
+   color: var(--primary-color);
+   width: 35px;
+   height: 35px;
+   line-height: 35px;
+   text-align: center;
+   border-radius: var(--border-radius-l);
+   transition: 0.3s;
+}
+
+.footer-icons a .fa:hover, .contact-list .fa:hover{
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.footer-bottom{
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: var(--font-size-s);
+    color: var(--dark-color);
+}
+
 .blank-section{
     width: 50vw;
     height: 75vh;
 }
+
 
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px){
@@ -604,6 +708,7 @@ nav .fa{
         animation: slideInUp 3s ease-out 0.2s;
         animation-fill-mode: backwards;
     }
+
     /*-------- Our Services --------*/
     .our-services{
         padding-top: 10px;
@@ -638,8 +743,8 @@ nav .fa{
     }
      
     .success-section p{
-    text-align: left;
-    padding-bottom: 0;
+        text-align: left;
+        padding-bottom: 0;
     }
 
     /*-------- Our Partners --------*/
@@ -676,7 +781,14 @@ nav .fa{
         text-align: center;
     }
 
+    /*-------- Footer Section --------*/
+    .footer-row{
+        flex-direction: column;
+    }
 
+    .footer-col{
+        flex-basis: 100%;
+    }
 
 }
 
@@ -798,5 +910,14 @@ nav .fa{
         text-align: center;
         padding: 0 10px;
     }
+
+     /*-------- CTA Section --------*/
+     .footer-row{
+        flex-wrap: wrap;
+     }
+
+     .footer-col{
+        width: 100%;
+     }
     
 }

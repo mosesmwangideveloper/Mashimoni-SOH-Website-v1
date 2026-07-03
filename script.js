@@ -24,3 +24,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 serviceCards.forEach(card => observer.observe(card));
+
+// Current Year in the footer
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
