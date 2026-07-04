@@ -25,7 +25,7 @@
     <main>
     <section class="header">
       <nav>
-        <a href="index.html"><img src="images/YouthRiseChangemakers-Logo-Website-v1.png" alt="YouthRiseChange Makers Logo Icon" class="logo-icon"></a>
+        <a href="index.html"><img src="images/YouthRiseChangemakers-Logo.png" alt="YouthRiseChange Makers Logo Icon" class="logo-icon"></a>
 
         <div class="nav-links" id="navLinks">
            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
@@ -199,6 +199,96 @@
 
   </section>
 
+  <!------- Our Team Section ------->
+  <section class="team-section">
+    <h1 class="fade-up">Meet The Team</h1>
+    <p class="fade-up">The People Turning Hope Into Action</p>
+    <p class="team-into fade-up">Behind every child who discovers a love for reading, every young person who finds their confidence, and every program that creates lasting change — is a team that believes transformation starts with people.</p>
+
+      <!-- David Odour -->
+    <div class="row-team team-grid">
+      <div class="team-col">
+        <img src="images/david-oduor.jpg" alt="David Oduor, Founder" class="team-photo">
+        <span class="founder-badge">Founder</span>
+        <h3 class="team-name">David Odour</h3>
+        <h4 class="team-role">Founder & Programs Lead</h4>
+        <p class="team-quote">"I didn't just learn to read in this library — I learned to think ahead, on the chessboard and in life. Now I get to open that same door for the next child."</p>
+        <p class="team-teaser">David grew up right here in Mathare — and once sat where these students sit today. Now he leads the mission, turning chessboards and library shelves into launchpads for the next generation.</p>
+        <button class="read-more-btn" onclick="openTeamModal('david')">Read Full Story</button>
+      </div>
+
+      <!-- Kevin Olengo -->
+      <div class="team-col">
+        <img src="images/kevin-olengo.jpg" alt="Kevin Olengo" class="team-photo">
+        <h3 class="team-name">Kevin Olengo</h3>
+        <h4 class="team-role">Community Engagement & Partnerships</h4>
+        <p class="team-quote">"Change doesn't happen to a community — it happens with one."</p>
+        <p class="team-teaser">Kevin believes real change starts when communities work together — and he's the one building those bridges.</p>
+        <button class="read-more-btn" onclick="openTeamModal('kevin')">Read Full Story</button>
+      </div>
+
+      <!-- Damaris Adhiambo -->
+      <div class="team-col">
+        <img src="images/damaris-adhiambo.jpeg" alt="Damaris Adhiambo" class="team-photo">
+        <h3 class="team-name">Damaris Adhiambo</h3>
+        <h4 class="team-role">Education & Child Development</h4>
+        <p class="team-quote">"Every child deserves a room where they feel like they belong."</p>
+        <p class="team-teaser">Damaris creates classrooms where every child feels safe enough to dream — and supported enough to try.</p>
+        <button class="read-more-btn" onclick="openTeamModal('damaris')">Read Full Story</button>
+      </div>
+
+      <!-- Nephine Nephine -->
+      <div class="team-col">
+        <img src="images/nephine.jpg" alt="Nephine" class="team-photo">
+        <h3 class="team-name">Nephine Nephine</h3>
+        <h4 class="team-role">Youth Empowerment Coordinator</h4>
+        <p class="team-quote">"Your circumstances are not your future — I'm here to prove that."</p>
+        <p class="team-teaser">Nephine helps young people find their voice — and the courage to lead with it.</p>
+        <button class="read-more-btn" onclick="openTeamModal('nephine')">Read Full Story</button>
+      </div>
+
+      <!-- David Kanguto -->
+      <div class="team-col">
+        <img src="images/David-kanguto.jpeg" alt="David Kanguto" class="team-photo">
+        <h3 class="team-name">David Kanguto</h3>
+        <h4 class="team-role">Operations & Community Programs</h4>
+        <p class="team-quote">"Impact isn't glamorous. It's showing up, every single day."</p>
+        <p class="team-teaser">David keeps the wheels turning behind the scenes — turning big ideas into daily impact for the families who need it.</p>
+        <button class="read-more-btn" onclick="openTeamModal('kanguto')">Read Full Story</button>
+      </div>
+      
+      <!-- Jimmy -->
+      <div class="team-col">
+        <img src="images/David-kanguto.jpeg" alt="Jimmy Kanguto" class="team-photo">
+        <h3 class="team-name">Jimmy</h3>
+        <h4 class="team-role">Chess Coach & Mentorships</h4>
+        <p class="team-quote">"Impact isn't glamorous. It's showing up, every single day."</p>
+        <p class="team-teaser">David keeps the wheels turning behind the scenes — turning big ideas into daily impact for the families who need it.</p>
+        <button class="read-more-btn" onclick="openTeamModal('jimmy')">Read Full Story</button>
+      </div>
+
+      <p class="team-closing fade-up">Every child deserves the chance to learn. Every young person deserves the chance to lead. Every community deserves hope. Together with our volunteers, partners, and the families we serve — we're building that future, one learner at a time.</p>
+
+  </section>
+
+       <!-- Team Bio Modal -->
+      <div class="team-modal-overlay" id="teamModalOverlay" onclick="closeTeamModal(event)">
+        <div class="team-modal">
+          <span class="team-modal-close" onclick="closeTeamModal()">&times;</span>
+          <img src="" alt="" id="modalPhoto" class="modal-photo">
+          <h3 id="modalName"></h3>
+          <h4 id="modalRole"></h4>
+          <p id="modalQuote" class="team-quote"></p>
+          <div id="modalBio"></div>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+
+
   <!------- CTA Section ------->
   <section class="cta-section">
     <h1 class="fade-up">Join Us In Empowering Mathare</h1>
@@ -215,7 +305,7 @@
   <section class="footer">
     <div class="footer-row">
       <div class="footer-col">
-        <img src="images/YouthRiseChangemakers-Logo-Website-v1.png" alt="YouthRiseChangeMakers Logo" class="footer-logo">
+        <img src="images/YouthRiseChangemakers-Logo.png" alt="YouthRiseChangeMakers Logo" class="footer-logo">
         <p>YouthRiseChangeMakers exists because every young person in Mathare deserves more than survival — they deserve a real shot at rising, learning, and leading</p>
       </div>
      

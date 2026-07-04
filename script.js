@@ -13,7 +13,7 @@ function hideMenu(){
 }
 
 // Slide in animation on scroll for services cards
-const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn');
+const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -28,3 +28,79 @@ serviceCards.forEach(card => observer.observe(card));
 // Current Year in the footer
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
+
+
+// Team member bio data
+
+const teamdata = {
+    david : {
+        name: "David Oduor",
+        role: "Founder & Programs Lead",
+        photo: "images/david-oduor.jpg",
+        quote: "\"I didn't just learn to read in this library — I learned to think ahead, on the chessboard and in life. Now I get to open that same door for the next child.\"",
+        bio: `<p>David grew up right here in Mathare — and once needed the very support he now provides. As a student at Mashimoni School of Hope, he discovered more than books: he found chess, mentors, and a reason to believe in his future.</p>
+        <p>Today, as Founder and Programs Lead, he's turned that experience into a mission — building safe spaces where children learn to read, think several moves ahead on a chessboard, and see a future beyond their circumstances.</p>
+        <p>He works hand-in-hand with students, volunteers, and the wider community to run programs that open doors many thought were closed. For David, every child who learns to love a book, play a game of chess, or simply believe in themselves is proof that where you start doesn't decide where you finish.</p>`
+    },
+
+    kevin : {
+        name: "Kevin Olengo",
+        role: "Community Engagement & Partnerships",
+        photo: "images/kevin-olengo.jpg",
+        quote: "\"Change doesn't happen to a community — it happens with one.\"",
+        bio: `<p>Kevin believes meaningful change happens when communities work together. He builds relationships with local leaders, schools, volunteers, and partners who share YouthRiseChangeMakers' vision of empowering children and youth.</p>
+        <p>His work focuses on strengthening collaboration, mobilizing resources, and making sure every initiative creates lasting impact within the community.</p>
+        <p>Kevin is driven by one belief: sustainable change begins when communities become active participants in shaping their own future.</p>`
+    },
+
+    damaris : {
+        name: "Damaris Adhiambo",
+        role: "Education & Child Development",
+        photo: "images/damaris-adhiambo.jpeg",
+        quote: "\"Every child deserves a room where they feel like they belong.\"",
+        bio: `<p>Damaris is dedicated to creating safe, inclusive, and inspiring learning environments where every child feels valued.</p>
+        <p>She supports educational activities, literacy programs, and mentorship sessions that help children grow academically while building confidence, creativity, and essential life skills.</p>
+        <p>Her passion is simple: helping every learner discover their potential, regardless of where they started.</p>`
+    },
+
+    nephine: {
+        name: "Nephine",
+        role: "Youth Empowerment Coordinator",
+        photo: "images/nephine.jpg",
+        quote: "\"Your circumstances are not your future — I'm here to prove that.\"",
+        bio: `<p>Nephine works alongside young people to nurture leadership, creativity, and personal growth.</p>
+        <p>She organizes mentorship programs, life-skills workshops, and youth engagement activities that help participants become confident leaders in their schools and communities.</p>
+        <p>Her mission: making sure every young person believes their circumstances should never define their future.</p>`
+    },
+
+      kanguto: {
+        name: "David Kanguto",
+        role: "Operations & Community Programs",
+        photo: "images/David-kanguto.jpeg",
+        quote: "\"Impact isn't glamorous. It's showing up, every single day.\"",
+        bio: `<p>David helps coordinate the day-to-day activities that keep YouthRiseChangeMakers running effectively.</p>
+        <p>From supporting volunteers and organizing community initiatives to making sure programs reach the children who need them most, he plays an essential role in turning ideas into action.</p>
+        <p>He's committed to building sustainable programs that create long-term opportunities for children, youth, and families throughout the community.</p>`
+    }
+};
+
+const teamModalOverlay = document.getElementById("teamModalOverlay");
+
+function openTeamModal(key){
+    const member = teamdata[key];
+
+    document.getElementById("modalPhoto").src = member.photo;
+    document.getElementById("modalPhoto").alt = member.name;
+    document.getElementById("modalName").textContent = member.name;
+    document.getElementById("modalRole").textContent = member.role;
+    document.getElementById("modalQuote").textContent = member.quote;
+    document.getElementById("modalBio").innerHTML = member.bio;
+
+    teamModalOverlay.classList.add("active");
+}
+
+function closeTeamModal(event){
+    if(!event || event.target === teamModalOverlay || event.target.classList.contains("team-modal-close")){
+        teamModalOverlay.classList.remove("active");
+    }
+}

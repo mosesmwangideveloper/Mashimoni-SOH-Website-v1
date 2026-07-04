@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
      font-family: "Poppins", sans-serif;
+     box-sizing: border-box;
+     scroll-behavior: smooth;
 }
 
 :root{
@@ -16,7 +18,7 @@
     --light-color-v1: #F9F9ED;
     --light-color-v2: #DCE6D7;
     --dark-color:#000;
-    --gray-color:#777;
+    --gray-color:#545454;
     --dark-linear-gradient-color: rgba(17, 21, 36, 0.7);
     --box-shadow-color: rgba(0, 0, 0, 0.3);
     --footer-hover-color: rgba(72, 134, 61, 0.895);
@@ -488,6 +490,199 @@ nav .fa{
     color: var(--dark-color);
 }
 
+/*-------- Our Team Section  --------*/
+.team-section{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.team-into, .team-closing{
+    max-width: 750px;
+    margin: 15px auto 30px;
+    line-height: 1.7s;
+    color: var(--dark-color);
+}
+
+.row-team{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.team-grid{
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-col{
+    background: var(--light-color-v1);
+    border-radius: var(--border-radius-xs);
+    padding: 30px 20px;
+    text-align: left;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 45%;
+}
+
+.team-col:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px var(--box-shadow-color);
+}
+
+.founder-badge{
+    display: block;
+    width: fit-content;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--font-size-s);
+    padding: 4px 16px;
+    border-radius: var(--border-radius-s);
+    margin-bottom: 10px;
+    
+}
+
+.team-photo{
+    width: 110px;
+    height: 110px;
+    border-radius: var(--border-radius-l);
+    border: 1px solid var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.featured-col .team-photo{
+    width: 140px;
+    height: 140px;
+}
+
+.team-name{
+    font-size: var(--font-size-m);
+    margin-bottom: 4px;
+}
+
+.team-role{
+    font-size: var(--font-size-s);
+    color: var(--dark-color);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 10px;
+}
+
+.team-quote{
+    font-size: var(--font-size-s);
+    color: var(--dark-color);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.team-teaser{
+    font-size: var(--font-size-s);
+    color: var(--gray-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more-btn{
+    background: transparent;
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+    padding: 8px 20px;
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-s);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover{
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+/*-- Team Section Animation --*/
+.team-col{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.team-col.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-grid .team-col:nth-child(1){
+    transition-delay: 0s;
+}
+.team-grid .team-col:nth-child(2){
+    transition-delay: 0.4s;
+}
+.team-grid .team-col:nth-child(3){
+    transition-delay: 0.8s;
+}
+.team-grid .team-col:nth-child(4){
+    transition-delay: 1.0s;
+}
+
+/*-- Modal --*/
+.team-modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.team-modal{
+    background: var(--white-color);
+    border-radius: var(--border-radius-xs);
+    padding: 40px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: left;
+    position: relative;
+}
+
+.team-modal-close{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    color: var(--gray-color);
+}
+
+.modal-photo{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: var(--border-radius-l);
+    border: 3px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.team-modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--box-shadow-color);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1001;
+    padding: 20px;
+}
+
+#modalBio p{
+    margin-bottom: 12px;
+    line-height: 1.7;
+    color: var(--dark-color);
+}
 
 /*-------- CTA Section  --------*/
 .cta-section{
@@ -518,6 +713,7 @@ nav .fa{
     justify-content: center;
     gap: 25px;
     margin-top: 20px;
+    
 }
 
 .cta-btn{
@@ -682,7 +878,7 @@ nav .fa{
     .hero-buttons{
         flex-direction: column;
         gap: 15px;
-        width: 80%;
+        width: 100%;
         justify-content: center;
     }
 
@@ -772,12 +968,12 @@ nav .fa{
     .cta-buttons{
         flex-direction: column;
         gap: 15px;
-        width: 80%;
+        width: 100%;
         justify-content: center;
     }
 
    .cta-section .cta-buttons .hero-btn{
-        width: 98%;
+        width: 100%;
         text-align: center;
     }
 
@@ -788,6 +984,23 @@ nav .fa{
 
     .footer-col{
         flex-basis: 100%;
+    }
+
+    /*-------- Our Team --------*/
+    .team-section{
+        width: 90%;
+        
+    }
+
+    .team-col, .featured-col{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .founder-badge{
+        display: block;
+        width: fit-content;
+        margin: 0 auto 10px;
     }
 
 }
