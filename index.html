@@ -199,6 +199,38 @@
 
   </section>
 
+   <!------- Our Partners Section ------->
+   <section class="impact-section">
+    <h1 class="fade-up">Our Imapct So Far</h1>
+    <p class="fade-up">
+      Real numbers behind real change in Mathare.
+    </p>
+
+    <div class="row-impact">
+      <div class="impact-col fade-up">
+        <h2 class="impact-number" data-target="100">0</h2>
+        <p class="impact-label">Childen & Youth Reached</p>
+      </div>
+
+      <div class="impact-col fade-up">
+        <h2 class="impact-number" data-target="8">0</h2>
+        <p class="impact-label">Years Runnings</p>
+      </div>
+
+      <div class="impact-col fade-up">
+        <h2 class="impact-number" data-target="6">0</h2>
+        <p class="impact-label">Programs Offered</p>
+      </div>
+
+      <div class="impact-col fade-up">
+        <h2 class="impact-number" data-target="3">0</h2>
+        <p class="impact-label">Partner Organisations</p>
+      </div>
+
+    </div>
+   </section>
+
+
   <!------- Our Team Section ------->
   <section class="team-section">
     <h1 class="fade-up">Meet The Team</h1>
@@ -257,34 +289,32 @@
         <button class="read-more-btn" onclick="openTeamModal('kanguto')">Read Full Story</button>
       </div>
       
-      <!-- Jimmy -->
+      <!-- Jimmy Odhiambo -->
       <div class="team-col">
-        <img src="images/David-kanguto.jpeg" alt="Jimmy Kanguto" class="team-photo">
-        <h3 class="team-name">Jimmy</h3>
-        <h4 class="team-role">Chess Coach & Mentorships</h4>
-        <p class="team-quote">"Impact isn't glamorous. It's showing up, every single day."</p>
-        <p class="team-teaser">David keeps the wheels turning behind the scenes — turning big ideas into daily impact for the families who need it.</p>
-        <button class="read-more-btn" onclick="openTeamModal('jimmy')">Read Full Story</button>
+        <img src="images/jimmy.jpeg" alt="James Odhiambo" class="team-photo">
+        <h3 class="team-name">James Ochieng</h3>
+        <h4 class="team-role">Head Coach, BoardLords Chess Club</h4>
+        <p class="team-quote">"A queen sacrificed is not a queen lost — it's a lesson the board just taught you."</p>
+        <p class="team-teaser">James turns thirty-two black-and-white squares into a classroom — where every move a child makes builds the patience and foresight they'll need far beyond the game.</p>
+        <button class="read-more-btn" onclick="openTeamModal('james')">Read Full Story</button>
       </div>
 
       <p class="team-closing fade-up">Every child deserves the chance to learn. Every young person deserves the chance to lead. Every community deserves hope. Together with our volunteers, partners, and the families we serve — we're building that future, one learner at a time.</p>
 
   </section>
 
-       <!-- Team Bio Modal -->
-      <div class="team-modal-overlay" id="teamModalOverlay" onclick="closeTeamModal(event)">
-        <div class="team-modal">
-          <span class="team-modal-close" onclick="closeTeamModal()">&times;</span>
-          <img src="" alt="" id="modalPhoto" class="modal-photo">
-          <h3 id="modalName"></h3>
-          <h4 id="modalRole"></h4>
-          <p id="modalQuote" class="team-quote"></p>
-          <div id="modalBio"></div>
-        </div>
+  <!-- Team Bio Modal -->
+  <div class="team-modal-overlay" id="teamModalOverlay" onclick="closeTeamModal(event)">
+    <div class="team-modal">
+      <span class="team-modal-close" onclick="closeTeamModal()">&times;</span>
+        <img src="" alt="" id="modalPhoto" class="modal-photo">
+        <h3 id="modalName"></h3>
+        <h4 id="modalRole"></h4>
+        <p id="modalQuote" class="team-quote"></p>
+        <div id="modalBio"></div>
       </div>
-
-      
-    </div>
+  </div>
+  </div>
 
 
 
@@ -339,13 +369,22 @@
       </div>
 
       <div class="footer-col">
-        <h2>Contact Us</h2>
+       <!--  <h2>Contact Us</h2>
         <ul class="contact-list">
           <li><i class="fa fa-phone"></i> 0771 671502</li>
           <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
           <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
-        </ul>
+        </ul> -->
+
+        <h2>Newsletter</h2>
+        <p>Sign up now to get daily latest news & updates from us</p>
+        <form action="#" method="POST" class="newsletter-form">
+          <input type="email" name="email" placeholder="Email address" required>
+          <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        </form>
       </div>
+
+      
     </div>
 
     <div class="footer-bottom">

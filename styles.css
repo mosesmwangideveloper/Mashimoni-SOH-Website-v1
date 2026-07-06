@@ -21,12 +21,10 @@
     --gray-color:#545454;
     --dark-linear-gradient-color: rgba(17, 21, 36, 0.7);
     --box-shadow-color: rgba(0, 0, 0, 0.3);
-    --footer-hover-color: rgba(72, 134, 61, 0.895);
-    --image-hover-color: rgba(4, 9, 30, 0.804);
+    --footer-hover-color: #48863de4;
+    --image-hover-color: #04091ecd;
     --tertiary-color: #fffbe6;
     
-  
-
     /* Fonts Sizes */
     --font-size-s: 0.9rem/* (14.4px) */;
     --font-size-n: 1rem/* (16px) */;
@@ -320,13 +318,13 @@ nav .fa{
     opacity: 1;
     transform: translateY(0);
 }
-.our-services-col, .partner-col{
+.our-services-col, .partner-col, .impact-col{
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.our-services-col.visible, .partner-col.visible{
+.our-services-col.visible, .partner-col.visible, .impact-col.visible{
     opacity: 1;
     transform: translateY(0);
 }
@@ -342,7 +340,7 @@ nav .fa{
     transition-delay: 0.8s;
 }
 
-/* Delay each partner card slightly */
+/* Delay each partner card  */
 .partner-col:nth-child(1){
     transition-delay: 0s;
 }
@@ -351,6 +349,20 @@ nav .fa{
 }
 .partner-col:nth-child(3){
     transition-delay: 0.8s;
+}
+
+/* Delay each impact card */
+.impact-col:nth-child(1){
+    background-image: linear-gradient(160deg, var(--footer-hover-color), var(--image-hover-color)), url(images/Deno-chess.jpeg);
+}
+.impact-col:nth-child(2){
+    background-image: linear-gradient(160deg, var(--footer-hover-color), var(--image-hover-color)), url(images/student-reading.jpeg);
+}
+.impact-col:nth-child(3){
+    background-image: linear-gradient(160deg, var(--footer-hover-color), var(--image-hover-color)), url(images/group-discussions.jpeg);
+}
+.impact-col:nth-child(4){
+    background-image: linear-gradient(160deg, var(--footer-hover-color), var(--image-hover-color)), url(images/girls-club-sessions.jpeg);
 }
 
 /* Second row gets a longer delay */
@@ -490,12 +502,62 @@ nav .fa{
     color: var(--dark-color);
 }
 
+/*-------- Our Impact Section  --------*/
+.impact-section{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0 0;
+}
+
+.row-impact{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 50px;
+    gap: 20px;
+}
+
+.impact-col{
+    flex-basis: 31%;
+    border-radius: var(--border-radius-xs);
+    background-repeat: no-repeat;
+    background-position:  top;
+    background-size: cover;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+    padding: 40px 20px;
+   /*  transition: opacity 0.5s ease-out, tranform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* .impact-col:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px var(--box-shadow-color);
+} */
+
+.impact-number{
+    font-size: var(--font-size-hero);
+    color: var(--white-color);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 10px;
+}
+
+.impact-number{
+    font-size: var(--font-size-xl);
+    color: var(--white-color);
+}
+
+.impact-label{
+    font-size: var(--font-size-n);
+    color: var(--white-color);
+}
+
+
+
 /*-------- Our Team Section  --------*/
 .team-section{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 0 0;
 }
 
 .team-into, .team-closing{
@@ -517,7 +579,7 @@ nav .fa{
 }
 
 .team-col{
-    background: var(--light-color-v1);
+    background: linear-gradient(135deg, var(--light-color-v1), #f0ead8);
     border-radius: var(--border-radius-xs);
     padding: 30px 20px;
     text-align: left;
@@ -549,6 +611,8 @@ nav .fa{
     border-radius: var(--border-radius-l);
     border: 1px solid var(--dark-color);
     margin-bottom: 15px;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .featured-col .team-photo{
@@ -655,8 +719,9 @@ nav .fa{
     height: 100px;
     object-fit: cover;
     border-radius: var(--border-radius-l);
-    border: 3px solid var(--primary-color);
+    border: 1px solid var(--dark-color);
     margin-bottom: 15px;
+    object-position: top center;
 }
 
 .team-modal-overlay{
@@ -797,6 +862,34 @@ nav .fa{
     font-size: var(--font-size-m);
     width: 25px;
 } */
+
+.newsletter-form{
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter-form input{
+    flex: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: var(--font-size-s);
+    border-radius: var(--border-radius-xs) 0 0 var(--border-radius-xs);
+    outline: none;
+}
+
+.newsletter-form button{
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0 18px;
+    cursor: pointer;
+    border-radius: 0 var(--border-radius-xs) var(--border-radius-xs) 0;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover{
+    background: var(--dark-color);
+}
 
 .footer-icons{
     display: flex;
@@ -989,7 +1082,6 @@ nav .fa{
     /*-------- Our Team --------*/
     .team-section{
         width: 90%;
-        
     }
 
     .team-col, .featured-col{
@@ -1002,6 +1094,17 @@ nav .fa{
         width: fit-content;
         margin: 0 auto 10px;
     }
+     /*-------- Our Impact --------*/
+     .impact-section{
+        width: 90%;
+     }
+
+     .row-impact{
+        flex-direction: column;
+     }
+     .impact-col{
+        flex-basis: 100%;
+     }
 
 }
 

@@ -13,7 +13,7 @@ function hideMenu(){
 }
 
 // Slide in animation on scroll for services cards
-const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col');
+const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col, .impact-col');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -73,14 +73,14 @@ const teamdata = {
         <p>Her mission: making sure every young person believes their circumstances should never define their future.</p>`
     },
 
-      kanguto: {
-        name: "David Kanguto",
-        role: "Operations & Community Programs",
-        photo: "images/David-kanguto.jpeg",
-        quote: "\"Impact isn't glamorous. It's showing up, every single day.\"",
-        bio: `<p>David helps coordinate the day-to-day activities that keep YouthRiseChangeMakers running effectively.</p>
-        <p>From supporting volunteers and organizing community initiatives to making sure programs reach the children who need them most, he plays an essential role in turning ideas into action.</p>
-        <p>He's committed to building sustainable programs that create long-term opportunities for children, youth, and families throughout the community.</p>`
+     james: {
+    name: "James Ochieng",
+    role: "Head Coach, BoardLords Chess Club",
+    photo: "images/jimmy.jpeg",
+    quote: "\"A queen sacrificed is not a queen lost — it's a lesson the board just taught you.\"",
+    bio: `<p>James didn't set out to build a chess club — he set out to share something he loved. What began as a volunteer teaching kids openings and puzzles after school soon became something bigger: a standing invitation for any child in Mathare to sit down, think, and discover what they were capable of.</p>
+    <p>Today, as Head Coach of BoardLords Chess Club, James trains students not just to play chess, but to think several moves ahead — on the board and in life. Under his coaching, BoardLords has gone on to compete against — and beat — other Schools of Hope and schools from across Kenya, proving that talent in Mathare has never been the question, only opportunity.</p>
+    <p>But for James, the trophies are the smallest part of the story. What matters more is watching a child who once made impulsive moves learn to pause, calculate, and choose wisely — then carry that same patience into how they handle a hard exam, a disagreement, or a setback. Every checkmate his students learn to see coming is proof that with the right guidance, kids from Mathare can out-think, out-plan, and outlast whatever the world puts in front of them.</p>`
     }
 };
 
@@ -104,3 +104,35 @@ function closeTeamModal(event){
         teamModalOverlay.classList.remove("active");
     }
 }
+
+//Animated count-up for Impact numbers
+const impactNumbers = document.querySelectorAll('.impact-number');
+
+function animateCount(el){
+    const target = parseInt(el.getAttribute('data-target'));
+    let current = 0;
+    const increment = target / 60;
+
+    function updateCount(){
+        current += increment;
+        if(current < target){
+            el.textContent = Math.ceil(current);
+            requestAnimationFrame(updateCount);
+        } else {
+            el.textContent = target + "+";
+        }
+    }
+
+    updateCount();
+}
+
+const imapctObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            animateCount(entry.target);
+            imapctObserver.unobserve(entry.target);
+        }
+    });
+}, {threshold: 0.5});
+
+impactNumbers.forEach(num => imapctObserver.observe(num));
