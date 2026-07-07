@@ -2,147 +2,185 @@
 var navLinks = document.getElementById("navLinks");
 var overlay = document.getElementById("overlay");
 
-function showMenu(){
-    navLinks.style.right = "0";
-    overlay.classList.add("active");
+function showMenu() {
+  navLinks.style.right = "0";
+  overlay.classList.add("active");
 }
 
-function hideMenu(){
-    navLinks.style.right = "-280px";
-    overlay.classList.remove("active");
+function hideMenu() {
+  navLinks.style.right = "-280px";
+  overlay.classList.remove("active");
+}
+
+// Hero slideshow - change slide every 5 seconds
+const heroSlides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+function showNextSlide() {
+  heroSlides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % heroSlides.length;
+  heroSlides[currentSlide].classList.add("active");
+}
+
+setInterval(showNextSlide, 5000);
+
+// Scroll-down arrow - jump to next section smoothly
+const scrollArrow = document.querySelector(".scroll-down-arrow");
+
+if (scrollArrow) {
+  scrollArrow.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("services").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 }
 
 // Slide in animation on scroll for services cards
-const serviceCards = document.querySelectorAll('.our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col, .impact-col');
+const serviceCards = document.querySelectorAll(
+  ".our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col, .impact-col",
+);
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-        }
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
-}, { threshold: 0.1 });
+  },
+  { threshold: 0.1 },
+);
 
-serviceCards.forEach(card => observer.observe(card));
+serviceCards.forEach((card) => observer.observe(card));
 
 // Current Year in the footer
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
-
 // Team member bio data
 
 const teamdata = {
-    david : {
-        name: "David Oduor",
-        role: "Founder & Programs Lead",
-        photo: "images/david-oduor.jpg",
-        quote: "\"I didn't just learn to read in this library — I learned to think ahead, on the chessboard and in life. Now I get to open that same door for the next child.\"",
-        bio: `<p>David grew up right here in Mathare — and once needed the very support he now provides. As a student at Mashimoni School of Hope, he discovered more than books: he found chess, mentors, and a reason to believe in his future.</p>
+  david: {
+    name: "David Oduor",
+    role: "Founder & Programs Lead",
+    photo: "images/david-oduor.jpg",
+    quote:
+      '"I didn\'t just learn to read in this library — I learned to think ahead, on the chessboard and in life. Now I get to open that same door for the next child."',
+    bio: `<p>David grew up right here in Mathare — and once needed the very support he now provides. As a student at Mashimoni School of Hope, he discovered more than books: he found chess, mentors, and a reason to believe in his future.</p>
         <p>Today, as Founder and Programs Lead, he's turned that experience into a mission — building safe spaces where children learn to read, think several moves ahead on a chessboard, and see a future beyond their circumstances.</p>
-        <p>He works hand-in-hand with students, volunteers, and the wider community to run programs that open doors many thought were closed. For David, every child who learns to love a book, play a game of chess, or simply believe in themselves is proof that where you start doesn't decide where you finish.</p>`
-    },
+        <p>He works hand-in-hand with students, volunteers, and the wider community to run programs that open doors many thought were closed. For David, every child who learns to love a book, play a game of chess, or simply believe in themselves is proof that where you start doesn't decide where you finish.</p>`,
+  },
 
-    kevin : {
-        name: "Kevin Olengo",
-        role: "Community Engagement & Partnerships",
-        photo: "images/kevin-olengo.jpg",
-        quote: "\"Change doesn't happen to a community — it happens with one.\"",
-        bio: `<p>Kevin believes meaningful change happens when communities work together. He builds relationships with local leaders, schools, volunteers, and partners who share YouthRiseChangeMakers' vision of empowering children and youth.</p>
+  kevin: {
+    name: "Kevin Olengo",
+    role: "Community Engagement & Partnerships",
+    photo: "images/kevin-olengo.jpg",
+    quote: '"Change doesn\'t happen to a community — it happens with one."',
+    bio: `<p>Kevin believes meaningful change happens when communities work together. He builds relationships with local leaders, schools, volunteers, and partners who share YouthRiseChangeMakers' vision of empowering children and youth.</p>
         <p>His work focuses on strengthening collaboration, mobilizing resources, and making sure every initiative creates lasting impact within the community.</p>
-        <p>Kevin is driven by one belief: sustainable change begins when communities become active participants in shaping their own future.</p>`
-    },
+        <p>Kevin is driven by one belief: sustainable change begins when communities become active participants in shaping their own future.</p>`,
+  },
 
-    damaris : {
-        name: "Damaris Adhiambo",
-        role: "Education & Child Development",
-        photo: "images/damaris-adhiambo.jpeg",
-        quote: "\"Every child deserves a room where they feel like they belong.\"",
-        bio: `<p>Damaris is dedicated to creating safe, inclusive, and inspiring learning environments where every child feels valued.</p>
+  damaris: {
+    name: "Damaris Adhiambo",
+    role: "Education & Child Development",
+    photo: "images/damaris-adhiambo.jpeg",
+    quote: '"Every child deserves a room where they feel like they belong."',
+    bio: `<p>Damaris is dedicated to creating safe, inclusive, and inspiring learning environments where every child feels valued.</p>
         <p>She supports educational activities, literacy programs, and mentorship sessions that help children grow academically while building confidence, creativity, and essential life skills.</p>
-        <p>Her passion is simple: helping every learner discover their potential, regardless of where they started.</p>`
-    },
+        <p>Her passion is simple: helping every learner discover their potential, regardless of where they started.</p>`,
+  },
 
-    nephine: {
-        name: "Nephine",
-        role: "Youth Empowerment Coordinator",
-        photo: "images/nephine.jpg",
-        quote: "\"Your circumstances are not your future — I'm here to prove that.\"",
-        bio: `<p>Nephine works alongside young people to nurture leadership, creativity, and personal growth.</p>
+  nephine: {
+    name: "Nephine",
+    role: "Youth Empowerment Coordinator",
+    photo: "images/nephine.jpg",
+    quote:
+      '"Your circumstances are not your future — I\'m here to prove that."',
+    bio: `<p>Nephine works alongside young people to nurture leadership, creativity, and personal growth.</p>
         <p>She organizes mentorship programs, life-skills workshops, and youth engagement activities that help participants become confident leaders in their schools and communities.</p>
-        <p>Her mission: making sure every young person believes their circumstances should never define their future.</p>`
-    },
-    
-    kanguto: {
-        name: "David Kanguto",
-        role: "Operations & Community Programs",
-        photo: "images/David-kanguto.jpeg",
-        quote: "\"Impact isn't glamorous. It's showing up, every single day.\"",
-        bio: `<p>David helps coordinate the day-to-day activities that keep YouthRiseChangeMakers running effectively.</p>
-        <p>From supporting volunteers and organizing community initiatives to making sure programs reach the children who need them most, he plays an essential role in turning ideas into action.</p>
-        <p>He's committed to building sustainable programs that create long-term opportunities for children, youth, and families throughout the community.</p>`
-    },
+        <p>Her mission: making sure every young person believes their circumstances should never define their future.</p>`,
+  },
 
-     james: {
+  kanguto: {
+    name: "David Kanguto",
+    role: "Operations & Community Programs",
+    photo: "images/David-kanguto.jpeg",
+    quote: "\"Impact isn't glamorous. It's showing up, every single day.\"",
+    bio: `<p>David helps coordinate the day-to-day activities that keep YouthRiseChangeMakers running effectively.</p>
+        <p>From supporting volunteers and organizing community initiatives to making sure programs reach the children who need them most, he plays an essential role in turning ideas into action.</p>
+        <p>He's committed to building sustainable programs that create long-term opportunities for children, youth, and families throughout the community.</p>`,
+  },
+
+  james: {
     name: "James Ochieng",
     role: "Head Coach, BoardLords Chess Club",
     photo: "images/jimmy.jpeg",
-    quote: "\"A queen sacrificed is not a queen lost — it's a lesson the board just taught you.\"",
+    quote:
+      '"A queen sacrificed is not a queen lost — it\'s a lesson the board just taught you."',
     bio: `<p>James didn't set out to build a chess club — he set out to share something he loved. What began as a volunteer teaching kids openings and puzzles after school soon became something bigger: a standing invitation for any child in Mathare to sit down, think, and discover what they were capable of.</p>
     <p>Today, as Head Coach of BoardLords Chess Club, James trains students not just to play chess, but to think several moves ahead — on the board and in life. Under his coaching, BoardLords has gone on to compete against — and beat — other Schools of Hope and schools from across Kenya, proving that talent in Mathare has never been the question, only opportunity.</p>
-    <p>But for James, the trophies are the smallest part of the story. What matters more is watching a child who once made impulsive moves learn to pause, calculate, and choose wisely — then carry that same patience into how they handle a hard exam, a disagreement, or a setback. Every checkmate his students learn to see coming is proof that with the right guidance, kids from Mathare can out-think, out-plan, and outlast whatever the world puts in front of them.</p>`
-    }
+    <p>But for James, the trophies are the smallest part of the story. What matters more is watching a child who once made impulsive moves learn to pause, calculate, and choose wisely — then carry that same patience into how they handle a hard exam, a disagreement, or a setback. Every checkmate his students learn to see coming is proof that with the right guidance, kids from Mathare can out-think, out-plan, and outlast whatever the world puts in front of them.</p>`,
+  },
 };
 
 const teamModalOverlay = document.getElementById("teamModalOverlay");
 
-function openTeamModal(key){
-    const member = teamdata[key];
+function openTeamModal(key) {
+  const member = teamdata[key];
 
-    document.getElementById("modalPhoto").src = member.photo;
-    document.getElementById("modalPhoto").alt = member.name;
-    document.getElementById("modalName").textContent = member.name;
-    document.getElementById("modalRole").textContent = member.role;
-    document.getElementById("modalQuote").textContent = member.quote;
-    document.getElementById("modalBio").innerHTML = member.bio;
+  document.getElementById("modalPhoto").src = member.photo;
+  document.getElementById("modalPhoto").alt = member.name;
+  document.getElementById("modalName").textContent = member.name;
+  document.getElementById("modalRole").textContent = member.role;
+  document.getElementById("modalQuote").textContent = member.quote;
+  document.getElementById("modalBio").innerHTML = member.bio;
 
-    teamModalOverlay.classList.add("active");
+  teamModalOverlay.classList.add("active");
 }
 
-function closeTeamModal(event){
-    if(!event || event.target === teamModalOverlay || event.target.classList.contains("team-modal-close")){
-        teamModalOverlay.classList.remove("active");
-    }
+function closeTeamModal(event) {
+  if (
+    !event ||
+    event.target === teamModalOverlay ||
+    event.target.classList.contains("team-modal-close")
+  ) {
+    teamModalOverlay.classList.remove("active");
+  }
 }
 
 //Animated count-up for Impact numbers
-const impactNumbers = document.querySelectorAll('.impact-number');
+const impactNumbers = document.querySelectorAll(".impact-number");
 
-function animateCount(el){
-    const target = parseInt(el.getAttribute('data-target'));
-    let current = 0;
-    const increment = target / 60;
+function animateCount(el) {
+  const target = parseInt(el.getAttribute("data-target"));
+  let current = 0;
+  const increment = target / 60;
 
-    function updateCount(){
-        current += increment;
-        if(current < target){
-            el.textContent = Math.ceil(current);
-            requestAnimationFrame(updateCount);
-        } else {
-            el.textContent = target + "+";
-        }
+  function updateCount() {
+    current += increment;
+    if (current < target) {
+      el.textContent = Math.ceil(current);
+      requestAnimationFrame(updateCount);
+    } else {
+      el.textContent = target + "+";
     }
+  }
 
-    updateCount();
+  updateCount();
 }
 
-const imapctObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry =>{
-        if(entry.isIntersecting){
-            animateCount(entry.target);
-            imapctObserver.unobserve(entry.target);
-        }
+const imapctObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        imapctObserver.unobserve(entry.target);
+      }
     });
-}, {threshold: 0.5});
+  },
+  { threshold: 0.5 },
+);
 
-impactNumbers.forEach(num => imapctObserver.observe(num));
+impactNumbers.forEach((num) => imapctObserver.observe(num));

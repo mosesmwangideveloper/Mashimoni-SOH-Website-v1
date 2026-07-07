@@ -1,139 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mashimoni School Of Hope</title>
 
     <!-------------Linking CSS Styles ----------->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!------------Linking Google Fonts  ------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <!---------- Linking Font Awesome Styles ------------>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!---------- Linking Website Icon ------------>
-    <link rel="icon" type="image/png" href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png" alt="YouthRiseChangeMakers Favicon Icon">
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png"
+      alt="YouthRiseChangeMakers Favicon Icon"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <main>
-    <section class="header">
-      <nav>
-        <a href="index.html"><img src="images/YouthRiseChangemakers-Logo.png" alt="YouthRiseChange Makers Logo Icon" class="logo-icon"></a>
+      <section class="header">
+        <nav>
+          <a href="index.html"
+            ><img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChange Makers Logo Icon"
+              class="logo-icon"
+          /></a>
 
-        <div class="nav-links" id="navLinks">
-           <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Programmes</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Sponsor</a></li>
-                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
-              </ul>
-        </div>
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Programmes</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Sponsor</a></li>
+              <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+            </ul>
+          </div>
           <a href="#" class="nav-donate-btn">Donate</a>
           <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
-      </nav>
-      
-      <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+        </nav>
 
-      <!-- <section class="hero-section">
-      <div class="row-hero">
-        <div class="hero-col">
-          <h2 class="hero-title">YouthRiseChangeMakers | Mashimoni School of Hope</h2>
-          <h3 class="hero-sub-title">Empowering Mathare Through Education & Opportunity</h3>
-          <p class="hero-description">In the heart of Mathare, one of Nairobi's largest informal settlements, we run a School of Hope — a safe learning space, evening library, and youth empowerment hub for children and teens facing poverty, violence, and educational inequality.
-          <br>
-          A home base. Built by the community, for the community
-          </p>
-          <div class="hero-buttons">
-            <a href="#" class="hero-btn side-btn">Sponsor A Child</a>
-            <a href="#" class="hero-btn">Partner With Us</a>
+        <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+
+        <section class="hero-section">
+          <div
+            class="hero-slide active"
+            style="
+              background-image:
+                linear-gradient(
+                  150deg,
+                  var(--footer-hover-color),
+                  var(--image-hover-color)
+                ),
+                url(images/Students-Discussing-in-library.jpeg);
+            "
+          >
+            <div class="hero-content">
+              <h2 class="hero-title">
+                YouthRiseChangeMakers | Mashimoni School of Hope
+              </h2>
+              <h3 class="hero-sub-title">
+                Empowering Mathare Through <br class="desktop-only-first" />
+                Education & Opportunity
+              </h3>
+
+              <div class="hero-buttons">
+                <a href="#" class="hero-btn side-btn">Donate</a>
+                <a href="#" class="hero-btn side-btn">Partner With Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="
+              background-image:
+                linear-gradient(
+                  150deg,
+                  var(--footer-hover-color),
+                  var(--image-hover-color)
+                ),
+                url(images/students-certificates.jpeg);
+            "
+          >
+            <div class="hero-content">
+              <h2 class="hero-title">
+                YouthRiseChangeMakers | Mashimoni School of Hope
+              </h2>
+              <h3 class="hero-sub-title">
+                Uniting Mathare Through <br class="desktop-only-second" />
+                Family & Belonging
+              </h3>
+
+              <div class="hero-buttons">
+                <a href="#" class="hero-btn side-btn">Donate</a>
+                <a href="#" class="hero-btn side-btn">Join Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="
+              background-image:
+                linear-gradient(
+                  150deg,
+                  var(--footer-hover-color),
+                  var(--image-hover-color)
+                ),
+                url(images/mashimoni-campus-together.jpg);
+            "
+          >
+            <div class="hero-content">
+              <h2 class="hero-title">
+                YouthRiseChangeMakers | Mashimoni School of Hope
+              </h2>
+              <h3 class="hero-sub-title">
+                Where Every Child <br class="desktop-only-third" />Finds A
+                Family
+              </h3>
+
+              <div class="hero-buttons">
+                <a href="#" class="hero-btn side-btn">Support Us</a>
+                <a href="#" class="hero-btn side-btn">Connect With Us</a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="scroll-down-arrow"
+            aria-label="Scroll to next section"
+          >
+            <i class="fa fa-chevron-down"></i>
+          </a>
+        </section>
+      </section>
+
+      <!------- WHAT WE BUILD SECTION------->
+      <section class="our-services" id="services">
+        <h1 class="fade-up">What We Build In Mathare</h1>
+        <p class="fade-up">
+          Here's what we're building in Mathare to empower the community and
+          create lasting change.
+        </p>
+
+        <div class="row-our-services">
+          <div class="our-services-col">
+            <img
+              src="images/safe-learning-spaces.jpeg"
+              alt="Library Books"
+              class="our-services-image"
+            />
+            <h3>Evening Library & Learning Hub</h3>
+            <p>
+              A safe, welcoming space where kids and teens read, learn, and grow
+              — with books, resources, and quiet study space.
+            </p>
+          </div>
+
+          <div class="our-services-col">
+            <img
+              src="images/group-discussions.jpeg"
+              alt="Library Books"
+              class="our-services-image"
+            />
+            <h3>Group Discussions</h3>
+            <p>
+              Real conversations. Bold opinions. Critical thinking. We give
+              every young person a voice — and the courage to use it.
+            </p>
+          </div>
+
+          <div class="our-services-col">
+            <img
+              src="images/Zoom-sessions.jpeg"
+              alt="Zooms Sessions"
+              class="our-services-image"
+            />
+            <h3>E-Learning Sessions</h3>
+            <p>
+              One screen. World-class educators. Right here in Mathare. Learning
+              has no borders when curiosity leads the way.
+            </p>
           </div>
         </div>
-        <div class="hero-col">
-          <img src="images/Students-Discussing-in-library.jpeg" alt="Hero" class="hero-image">
-        </div>
-      </div> -->
 
-      <section class="hero-section">
-        <div class="hero-content">
-          <h2 class="hero-title">YouthRiseChangeMakers | Mashimoni School of Hope</h2>
-          <h3 class="hero-sub-title">Empowering Mathare Through <br> Education & Opportunity</h3>
-        <!--   <p class="hero-description">
-          In the heart of Mathare, one of Nairobi's largest informal settlements, we run a School of Hope — a safe learning space, evening library, and youth empowerment hub for children and teens facing poverty, violence, and educational inequality.
-           <br>   A home base. Built by the community, for the community
-          </p> -->
+        <div class="row-our-services">
+          <div class="our-services-col">
+            <img
+              src="images/chess-competion.jpg"
+              alt="Library Books"
+              class="our-services-image"
+            />
+            <h3>Chess Training & Competitions</h3>
+            <p>
+              Strategy. Patience. One move at a time. Chess teaches us as youth
+              to think, plan, and compete — fearlessly.
+            </p>
+          </div>
 
-          <div class="hero-buttons">
-            <a href="#" class="hero-btn side-btn">Donate</a>
-            <a href="#" class="hero-btn side-btn">Partner With Us</a>
+          <div class="our-services-col">
+            <img
+              src="images/debate-competitons.jpeg"
+              alt="Library Books"
+              class="our-services-image"
+            />
+            <h3>Debate Competitions</h3>
+            <p>
+              Speak up. Stand firm. Win the room. We teach students that their
+              voice deserves to be heard.
+            </p>
+          </div>
+
+          <div class="our-services-col">
+            <img
+              src="images/girls-club-sessions.jpeg"
+              alt="Zooms Sessions"
+              class="our-services-image"
+            />
+            <h3>Girls' Club Sessions</h3>
+            <p>
+              A safe circle. No judgment. Just honest conversations about
+              rights, dreams, and the futures they are boldly building.
+            </p>
           </div>
         </div>
       </section>
 
-    </section>
-
-    <!------- WHAT WE BUILD SECTION------->
-  <section class="our-services">
-    <h1 class="fade-up">What We Build In Mathare</h1>
-    <p class="fade-up">Here's what we're building in Mathare to empower the community and create lasting change.</p>
-
-    <div class="row-our-services">
-      <div class="our-services-col">
-        <img src="images/safe-learning-spaces.jpeg" alt="Library Books" class="our-services-image">
-        <h3>Evening Library & Learning Hub</h3>
-        <p>A safe, welcoming space where kids and teens read, learn, and grow — with books, resources, and quiet study space.</p>
-      </div>
-      
-      <div class="our-services-col">
-        <img src="images/group-discussions.jpeg" alt="Library Books" class="our-services-image">
-        <h3>Group Discussions</h3>
-        <p>Real conversations. Bold opinions. Critical thinking. We give every young person a voice — and the courage to use it.</p>
-      </div>
-
-      <div class="our-services-col">
-        <img src="images/Zoom-sessions.jpeg" alt="Zooms Sessions" class="our-services-image">
-        <h3>E-Learning Sessions</h3>
-        <p>One screen. World-class educators. Right here in Mathare. Learning has no borders when curiosity leads the way.</p>
-      </div>
-
-    </div>
-
-    <div class="row-our-services">
-      <div class="our-services-col">
-        <img src="images/chess-competion.jpg" alt="Library Books" class="our-services-image">
-        <h3>Chess Training & Competitions</h3>
-        <p>Strategy. Patience. One move at a time. Chess teaches us as youth to think, plan, and compete — fearlessly.</p>
-      </div>
-      
-      <div class="our-services-col">
-        <img src="images/debate-competitons.jpeg" alt="Library Books" class="our-services-image">
-        <h3>Debate Competitions</h3>
-        <p>Speak up. Stand firm. Win the room. We teach  students that their voice deserves to be heard.</p>
-      </div>
-
-      <div class="our-services-col">
-        <img src="images/girls-club-sessions.jpeg" alt="Zooms Sessions" class="our-services-image">
-        <h3>Girls' Club Sessions</h3>
-        <p>A safe circle. No judgment. Just honest conversations about rights, dreams, and the futures they are boldly building.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-   <!------- Our History ------->
-  <!--  <section class="history-section">
+      <!------- Our History ------->
+      <!--  <section class="history-section">
       <div class="row-history">
         <div class="history-col">
           <h2 class="history-title">Our History</h2>
@@ -160,257 +275,387 @@
         </div>
     </section> -->
 
-
-  <!------- Our Partners Section ------->
-  <section class="partners-section">
-    <h1 class="fade-up">Our Partners</h1>
-    <p class="fade-up">We are grateful for the support of our partners who help us empower youth and create lasting change in Mathare.</p>
-
-    <div class="row-partners">
-      <div class="partner-col">
-        <img src="images/ChallengeAid-Logo.png" alt="ChallengeAid Logo" class="partner-logo">
-        <h3 class="partner-name">ChallengeAid</h3>
-      </div>
-
-      <div class="partner-col">
-        <img src="images/mashimoni-library-logo.png" alt="Mashimoni Library Logo" class="partner-logo">
-        <h3 class="partner-name">Mashimoni Library</h3>
-      </div>
-
-       <div class="partner-col">
-        <img src="images/boards-lords-chess-club-logo.png" alt="Board Lords Chess Club Logo" class="partner-logo">
-        <h3 class="partner-name">Board Lords Chess Club</h3>
-      </div>
-
-    </div>
-
-  </section>
-
-   <!------- Our Impact Section ------->
-   <section class="impact-section">
-    <h1 class="fade-up">Our Imapct</h1>
-    <p class="fade-up">
-      Real numbers behind real change in Mathare.
-    </p>
-
-    <div class="row-impact">
-      <div class="impact-col fade-up">
-        <h2 class="impact-number" data-target="100">0</h2>
-        <p class="impact-label">Childen & Youth Reached</p>
-      </div>
-
-      <div class="impact-col fade-up">
-        <h2 class="impact-number" data-target="8">0</h2>
-        <p class="impact-label">Years Runnings</p>
-      </div>
-
-      <div class="impact-col fade-up">
-        <h2 class="impact-number" data-target="6">0</h2>
-        <p class="impact-label">Programs Offered</p>
-      </div>
-
-      <div class="impact-col fade-up">
-        <h2 class="impact-number" data-target="3">0</h2>
-        <p class="impact-label">Partner Organisations</p>
-      </div>
-
-    </div>
-   </section>
-
-    <!------- Success Story Section ------->
-  <section class="success-section">
-    <h1 class="fade-up">Our Success Stories</h1>
-      <p class="fade-up">From Mathare to lasting change — see how we're empowering youth through education, mentorship, and community.</p>
-
-    <div class="row-success">
-      <div class="success-col">
-        <h2 class="success-title">Where Hope Lives</h2>
-        <h3 class="success-sub-title">One small library is quietly rewriting futures across Mathare</h3>
-        <p class="success-description">
-        Behind a modest doorway in Mathare, children step out of chaos and into calm. Here, they find more than books — they find mentors who listen, a community that shows up, and the quiet, steady support that turns everyday struggle into a real shot at a different future.
+      <!------- Our Partners Section ------->
+      <section class="partners-section">
+        <h1 class="fade-up">Our Partners</h1>
+        <p class="fade-up">
+          We are grateful for the support of our partners who help us empower
+          youth and create lasting change in Mathare.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#" class="hero-btn side-btn">Donate</a>
-          <a href="#" class="hero-btn">Read More Stories</a>
+        <div class="row-partners">
+          <div class="partner-col">
+            <img
+              src="images/ChallengeAid-Logo.png"
+              alt="ChallengeAid Logo"
+              class="partner-logo"
+            />
+            <h3 class="partner-name">ChallengeAid</h3>
+          </div>
+
+          <div class="partner-col">
+            <img
+              src="images/mashimoni-library-logo.png"
+              alt="Mashimoni Library Logo"
+              class="partner-logo"
+            />
+            <h3 class="partner-name">Mashimoni Library</h3>
+          </div>
+
+          <div class="partner-col">
+            <img
+              src="images/boards-lords-chess-club-logo.png"
+              alt="Board Lords Chess Club Logo"
+              class="partner-logo"
+            />
+            <h3 class="partner-name">Board Lords Chess Club</h3>
+          </div>
+        </div>
+      </section>
+
+      <!------- Our Impact Section ------->
+      <section class="impact-section">
+        <h1 class="fade-up">Our Impact</h1>
+        <p class="fade-up">Real numbers behind real change in Mathare.</p>
+
+        <div class="row-impact">
+          <div class="impact-col fade-up">
+            <h2 class="impact-number" data-target="100">0</h2>
+            <p class="impact-label">Childen & Youth Reached</p>
+          </div>
+
+          <div class="impact-col fade-up">
+            <h2 class="impact-number" data-target="8">0</h2>
+            <p class="impact-label">Years Runnings</p>
+          </div>
+
+          <div class="impact-col fade-up">
+            <h2 class="impact-number" data-target="6">0</h2>
+            <p class="impact-label">Programs Offered</p>
+          </div>
+
+          <div class="impact-col fade-up">
+            <h2 class="impact-number" data-target="3">0</h2>
+            <p class="impact-label">Partner Organisations</p>
+          </div>
+        </div>
+      </section>
+
+      <!------- Success Story Section ------->
+      <section class="success-section">
+        <h1 class="fade-up">Our Success Stories</h1>
+        <p class="fade-up">
+          From Mathare to lasting change — see how we're empowering youth
+          through education, mentorship, and community.
+        </p>
+
+        <div class="row-success">
+          <div class="success-col">
+            <h2 class="success-title">Where Hope Lives</h2>
+            <h3 class="success-sub-title">
+              One small library is quietly rewriting futures across Mathare
+            </h3>
+            <p class="success-description">
+              Behind a modest doorway in Mathare, children step out of chaos and
+              into calm. Here, they find more than books — they find mentors who
+              listen, a community that shows up, and the quiet, steady support
+              that turns everyday struggle into a real shot at a different
+              future.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#" class="hero-btn side-btn">Donate</a>
+              <a href="#" class="hero-btn">Read More Stories</a>
+            </div>
+          </div>
+
+          <div class="success-col">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/IDX6xxbkaJo?si=fbEeDjoWBXKh19aC"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!------- Our Team Section ------->
+      <section class="team-section">
+        <h1 class="fade-up">Meet The Team</h1>
+        <p class="fade-up">The People Turning Hope Into Action</p>
+        <p class="team-into fade-up">
+          Behind every child who discovers a love for reading, every young
+          person who finds their confidence, and every program that creates
+          lasting change — is a team that believes transformation starts with
+          people.
+        </p>
+
+        <div class="row-team team-grid">
+          <!-- David Odour -->
+          <div class="team-col">
+            <img
+              src="images/david-oduor.jpg"
+              alt="David Oduor, Founder"
+              class="team-photo"
+            />
+            <span class="founder-badge">Founder</span>
+            <h3 class="team-name">David Odour</h3>
+            <h4 class="team-role">Founder & Programs Lead</h4>
+            <p class="team-quote">
+              "I didn't just learn to read in this library — I learned to think
+              ahead, on the chessboard and in life. Now I get to open that same
+              door for the next child."
+            </p>
+            <p class="team-teaser">
+              David grew up right here in Mathare — and once sat where these
+              students sit today. Now he leads the mission, turning chessboards
+              and library shelves into launchpads for the next generation.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('david')">
+              Read Full Story
+            </button>
+          </div>
+
+          <!-- Kevin Olengo -->
+          <div class="team-col">
+            <img
+              src="images/kevin-olengo.jpg"
+              alt="Kevin Olengo"
+              class="team-photo"
+            />
+            <h3 class="team-name">Kevin Olengo</h3>
+            <h4 class="team-role">Community Engagement & Partnerships</h4>
+            <p class="team-quote">
+              "Change doesn't happen to a community — it happens with one."
+            </p>
+            <p class="team-teaser">
+              Kevin believes real change starts when communities work together —
+              and he's the one building those bridges.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('kevin')">
+              Read Full Story
+            </button>
+          </div>
+
+          <!-- Damaris Adhiambo -->
+          <div class="team-col">
+            <img
+              src="images/damaris-adhiambo.jpeg"
+              alt="Damaris Adhiambo"
+              class="team-photo"
+            />
+            <h3 class="team-name">Damaris Adhiambo</h3>
+            <h4 class="team-role">Education & Child Development</h4>
+            <p class="team-quote">
+              "Every child deserves a room where they feel like they belong."
+            </p>
+            <p class="team-teaser">
+              Damaris creates classrooms where every child feels safe enough to
+              dream — and supported enough to try.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('damaris')">
+              Read Full Story
+            </button>
+          </div>
+
+          <!-- Nephine Nephine -->
+          <div class="team-col">
+            <img src="images/nephine.jpg" alt="Nephine" class="team-photo" />
+            <h3 class="team-name">Nephine Nephine</h3>
+            <h4 class="team-role">Youth Empowerment Coordinator</h4>
+            <p class="team-quote">
+              "Your circumstances are not your future — I'm here to prove that."
+            </p>
+            <p class="team-teaser">
+              Nephine helps young people find their voice — and the courage to
+              lead with it.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('nephine')">
+              Read Full Story
+            </button>
+          </div>
+
+          <!-- David Kanguto -->
+          <div class="team-col">
+            <img
+              src="images/David-kanguto.jpeg"
+              alt="David Kanguto"
+              class="team-photo"
+            />
+            <h3 class="team-name">David Kanguto</h3>
+            <h4 class="team-role">Operations & Community Programs</h4>
+            <p class="team-quote">
+              "Impact isn't glamorous. It's showing up, every single day."
+            </p>
+            <p class="team-teaser">
+              David keeps the wheels turning behind the scenes — turning big
+              ideas into daily impact for the families who need it.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('kanguto')">
+              Read Full Story
+            </button>
+          </div>
+
+          <!-- Jimmy Odhiambo -->
+          <div class="team-col">
+            <img
+              src="images/jimmy.jpeg"
+              alt="James Odhiambo"
+              class="team-photo"
+            />
+            <h3 class="team-name">James Ochieng</h3>
+            <h4 class="team-role">Head Coach, BoardLords Chess Club</h4>
+            <p class="team-quote">
+              "A queen sacrificed is not a queen lost — it's a lesson the board
+              just taught you."
+            </p>
+            <p class="team-teaser">
+              James turns thirty-two black-and-white squares into a classroom —
+              where every move a child makes builds the patience and foresight
+              they'll need far beyond the game.
+            </p>
+            <button class="read-more-btn" onclick="openTeamModal('james')">
+              Read Full Story
+            </button>
+          </div>
+
+          <p class="team-closing fade-up">
+            Every child deserves the chance to learn. Every young person
+            deserves the chance to lead. Every community deserves hope. Together
+            with our volunteers, partners, and the families we serve — we're
+            building that future, one learner at a time.
+          </p>
+        </div>
+      </section>
+
+      <!-- Team Bio Modal -->
+      <div
+        class="team-modal-overlay"
+        id="teamModalOverlay"
+        onclick="closeTeamModal(event)"
+      >
+        <div class="team-modal">
+          <span class="team-modal-close" onclick="closeTeamModal()"
+            >&times;</span
+          >
+          <img src="" alt="" id="modalPhoto" class="modal-photo" />
+          <h3 id="modalName"></h3>
+          <h4 id="modalRole"></h4>
+          <p id="modalQuote" class="team-quote"></p>
+          <div id="modalBio"></div>
         </div>
       </div>
 
-      <div class="success-col">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/IDX6xxbkaJo?si=fbEeDjoWBXKh19aC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
+      <!------- CTA Section ------->
+      <section class="cta-section">
+        <h1 class="fade-up">Join Us In Empowering Mathare</h1>
+        <p class="fade-up">
+          Your support can change lives. Sponsor a child, partner with us, or
+          volunteer to make a lasting impact in the community.
+        </p>
 
-
-  <!------- Our Team Section ------->
-  <section class="team-section">
-    <h1 class="fade-up">Meet The Team</h1>
-    <p class="fade-up">The People Turning Hope Into Action</p>
-    <p class="team-into fade-up">Behind every child who discovers a love for reading, every young person who finds their confidence, and every program that creates lasting change — is a team that believes transformation starts with people.</p>
-
-      <!-- David Odour -->
-    <div class="row-team team-grid">
-      <div class="team-col">
-        <img src="images/david-oduor.jpg" alt="David Oduor, Founder" class="team-photo">
-        <span class="founder-badge">Founder</span>
-        <h3 class="team-name">David Odour</h3>
-        <h4 class="team-role">Founder & Programs Lead</h4>
-        <p class="team-quote">"I didn't just learn to read in this library — I learned to think ahead, on the chessboard and in life. Now I get to open that same door for the next child."</p>
-        <p class="team-teaser">David grew up right here in Mathare — and once sat where these students sit today. Now he leads the mission, turning chessboards and library shelves into launchpads for the next generation.</p>
-        <button class="read-more-btn" onclick="openTeamModal('david')">Read Full Story</button>
-      </div>
-
-      <!-- Kevin Olengo -->
-      <div class="team-col">
-        <img src="images/kevin-olengo.jpg" alt="Kevin Olengo" class="team-photo">
-        <h3 class="team-name">Kevin Olengo</h3>
-        <h4 class="team-role">Community Engagement & Partnerships</h4>
-        <p class="team-quote">"Change doesn't happen to a community — it happens with one."</p>
-        <p class="team-teaser">Kevin believes real change starts when communities work together — and he's the one building those bridges.</p>
-        <button class="read-more-btn" onclick="openTeamModal('kevin')">Read Full Story</button>
-      </div>
-
-      <!-- Damaris Adhiambo -->
-      <div class="team-col">
-        <img src="images/damaris-adhiambo.jpeg" alt="Damaris Adhiambo" class="team-photo">
-        <h3 class="team-name">Damaris Adhiambo</h3>
-        <h4 class="team-role">Education & Child Development</h4>
-        <p class="team-quote">"Every child deserves a room where they feel like they belong."</p>
-        <p class="team-teaser">Damaris creates classrooms where every child feels safe enough to dream — and supported enough to try.</p>
-        <button class="read-more-btn" onclick="openTeamModal('damaris')">Read Full Story</button>
-      </div>
-
-      <!-- Nephine Nephine -->
-      <div class="team-col">
-        <img src="images/nephine.jpg" alt="Nephine" class="team-photo">
-        <h3 class="team-name">Nephine Nephine</h3>
-        <h4 class="team-role">Youth Empowerment Coordinator</h4>
-        <p class="team-quote">"Your circumstances are not your future — I'm here to prove that."</p>
-        <p class="team-teaser">Nephine helps young people find their voice — and the courage to lead with it.</p>
-        <button class="read-more-btn" onclick="openTeamModal('nephine')">Read Full Story</button>
-      </div>
-
-      <!-- David Kanguto -->
-      <div class="team-col">
-        <img src="images/David-kanguto.jpeg" alt="David Kanguto" class="team-photo">
-        <h3 class="team-name">David Kanguto</h3>
-        <h4 class="team-role">Operations & Community Programs</h4>
-        <p class="team-quote">"Impact isn't glamorous. It's showing up, every single day."</p>
-        <p class="team-teaser">David keeps the wheels turning behind the scenes — turning big ideas into daily impact for the families who need it.</p>
-        <button class="read-more-btn" onclick="openTeamModal('kanguto')">Read Full Story</button>
-      </div>
-      
-      <!-- Jimmy Odhiambo -->
-      <div class="team-col">
-        <img src="images/jimmy.jpeg" alt="James Odhiambo" class="team-photo">
-        <h3 class="team-name">James Ochieng</h3>
-        <h4 class="team-role">Head Coach, BoardLords Chess Club</h4>
-        <p class="team-quote">"A queen sacrificed is not a queen lost — it's a lesson the board just taught you."</p>
-        <p class="team-teaser">James turns thirty-two black-and-white squares into a classroom — where every move a child makes builds the patience and foresight they'll need far beyond the game.</p>
-        <button class="read-more-btn" onclick="openTeamModal('james')">Read Full Story</button>
-      </div>
-
-      <p class="team-closing fade-up">Every child deserves the chance to learn. Every young person deserves the chance to lead. Every community deserves hope. Together with our volunteers, partners, and the families we serve — we're building that future, one learner at a time.</p>
-
-  </section>
-
-  <!-- Team Bio Modal -->
-  <div class="team-modal-overlay" id="teamModalOverlay" onclick="closeTeamModal(event)">
-    <div class="team-modal">
-      <span class="team-modal-close" onclick="closeTeamModal()">&times;</span>
-        <img src="" alt="" id="modalPhoto" class="modal-photo">
-        <h3 id="modalName"></h3>
-        <h4 id="modalRole"></h4>
-        <p id="modalQuote" class="team-quote"></p>
-        <div id="modalBio"></div>
-      </div>
-  </div>
-  </div>
-
-
-
-
-  <!------- CTA Section ------->
-  <section class="cta-section">
-    <h1 class="fade-up">Join Us In Empowering Mathare</h1>
-    <p class="fade-up">Your support can change lives. Sponsor a child, partner with us, or volunteer to make a lasting impact in the community.</p>
-
-    <div class="cta-buttons">
-      <a href="#" class="hero-btn cta-btn">Donate</a>
-      <a href="#" class="hero-btn cta-btn">Partner With Us</a>
-    </div>
-
-  </section>
-
-  <!---------Footer Section------->
-  <section class="footer">
-    <div class="footer-row">
-      <div class="footer-col">
-        <img src="images/YouthRiseChangemakers-Logo.png" alt="YouthRiseChangeMakers Logo" class="footer-logo">
-        <p>YouthRiseChangeMakers exists because every young person in Mathare deserves more than survival — they deserve a real shot at rising, learning, and leading</p>
-      </div>
-     
-      <div class="footer-col">
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Get Involved</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-
-        <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <div class="cta-buttons">
+          <a href="#" class="hero-btn cta-btn">Donate</a>
+          <a href="#" class="hero-btn cta-btn">Partner With Us</a>
         </div>
-      </div>
+      </section>
 
-      <div class="footer-col">
-        <h2>Our Programs & Activities</h2>
-        <ul>
-          <li><a href="#">Evening Library & Learning Hub</a></li>
-          <li><a href="#">Group Discussions</a></li>
-          <li><a href="#">E-Learning Sessions</a></li>
-          <li><a href="#">Chess Training & Competitions</a></li>
-          <li><a href="#">Debate Competitions</a></li>
-        </ul>
-      </div>
+      <!---------Footer Section------->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChangeMakers Logo"
+              class="footer-logo"
+            />
+            <p>
+              YouthRiseChangeMakers exists because every young person in Mathare
+              deserves more than survival — they deserve a real shot at rising,
+              learning, and leading
+            </p>
+          </div>
 
-      <div class="footer-col">
-       <!--  <h2>Contact Us</h2>
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h2>Our Programs & Activities</h2>
+            <ul>
+              <li><a href="#">Evening Library & Learning Hub</a></li>
+              <li><a href="#">Group Discussions</a></li>
+              <li><a href="#">E-Learning Sessions</a></li>
+              <li><a href="#">Chess Training & Competitions</a></li>
+              <li><a href="#">Debate Competitions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <!--  <h2>Contact Us</h2>
         <ul class="contact-list">
           <li><i class="fa fa-phone"></i> 0771 671502</li>
           <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
           <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
         </ul> -->
 
-        <h2>Newsletter</h2>
-        <p>Sign up now to get daily latest news & updates from us</p>
-        <form action="#" method="POST" class="newsletter-form">
-          <input type="email" name="email" placeholder="Email address" required>
-          <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-        </form>
-      </div>
+            <h2>Newsletter</h2>
+            <p>Sign up now to get daily latest news & updates from us</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button class="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
 
-      
-    </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> YouthRiseChangeMakers |
+            Mashimoni School Of Hope. All rights reserved.
+          </p>
+        </div>
+      </section>
 
-    <div class="footer-bottom">
-      <p>&copy; <span id="currentYear"></span> YouthRiseChangeMakers | Mashimoni School Of Hope. All rights reserved.</p>
-    </div>
-  </section>
-
-  <!---------Blank Section------->
-<!--   <section class="blank-section">
+      <!---------Blank Section------->
+      <!--   <section class="blank-section">
   </section> -->
-   
-    <!---------Linking Script File------->
-    <script src="script.js"></script>
 
+      <!---------Linking Script File------->
+      <script src="script.js"></script>
     </main>
-</body>
+  </body>
 </html>
