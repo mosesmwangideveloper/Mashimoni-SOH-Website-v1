@@ -72,6 +72,16 @@ const teamdata = {
         <p>She organizes mentorship programs, life-skills workshops, and youth engagement activities that help participants become confident leaders in their schools and communities.</p>
         <p>Her mission: making sure every young person believes their circumstances should never define their future.</p>`
     },
+    
+    kanguto: {
+        name: "David Kanguto",
+        role: "Operations & Community Programs",
+        photo: "images/David-kanguto.jpeg",
+        quote: "\"Impact isn't glamorous. It's showing up, every single day.\"",
+        bio: `<p>David helps coordinate the day-to-day activities that keep YouthRiseChangeMakers running effectively.</p>
+        <p>From supporting volunteers and organizing community initiatives to making sure programs reach the children who need them most, he plays an essential role in turning ideas into action.</p>
+        <p>He's committed to building sustainable programs that create long-term opportunities for children, youth, and families throughout the community.</p>`
+    },
 
      james: {
     name: "James Ochieng",

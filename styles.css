@@ -63,7 +63,7 @@
 /*-------- Nav Styling --------*/
 nav{
     display: flex;
-    padding: 0.3% 6%;
+    padding: 0.1% 6%;
     justify-content: space-between;
     align-items: center;
 }
@@ -82,23 +82,42 @@ nav .fa{
 
 .nav-links{
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
-.nav-links ul li{
+.nav-donate-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white-color);
+    background: var(--primary-color);
+    padding: 8px 22px;
+    font-size: var(--font-size-s);
+    border-radius: var(--border-radius-s);
+    margin-left: 15px;
+    transition: 2s ease-out;
+}
+
+.nav-donate-btn:hover{
+    background: var(--white-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+}
+
+
+.nav-links ul li:not(.nav-mobile-donate){
     list-style-type: none;
     display: inline-block;
     padding: 5px 12px;
     position: relative;
 }
 
-.nav-links ul li a{
+.nav-links ul li:not(.nav-mobile-donate) a{
     text-decoration: none;
     color: var(--dark-color);
     font-size: var(--font-size-n);
 }
 
-.nav-links ul li a::after{
+.nav-links ul li:not(.nav-mobile-donate) a::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -108,8 +127,12 @@ nav .fa{
     transition: 0.5s;
 }
 
-.nav-links ul li a:hover::after{
+.nav-links ul li:not(.nav-mobile-donate) a:hover::after{
     width: 100%;
+}
+
+.nav-mobile-donate{
+    display: none;
 }
 
 .overlay{
@@ -1000,17 +1023,22 @@ nav .fa{
         text-align: left;
         z-index: 1000;
         transition: 1s;
+        color: var(--dark-color);
     }
 
     .nav-links ul{
-        padding: var(--font-size-xxl);
+        padding: var(--font-size-xl);
+        
     }
 
-    .nav-links ul li{
+    .nav-links ul li:not(.nav-mobile-donate){
         display: block;
         padding: 10px 0;
-  
     }
+
+     .nav-links ul li:not(.nav-mobile-donate) a{
+        color: var(--dark-color);
+     }
 
     nav .fa{
         display: block;
@@ -1018,6 +1046,24 @@ nav .fa{
         font-size: var(--font-size-l);
         cursor: pointer;
     }
+
+    .nav-donate-btn{
+        display: none;
+    }
+
+    .nav-mobile-donate{
+        display: block;
+        margin-top: 15px;
+    }
+
+     .nav-mobile-donate a{
+        display: inline-block;
+        background: var(--white-color);
+        color: var(--dark-color);
+        padding: 10px 24px;
+        border-radius: var(--border-radius-s);
+        text-decoration: none;
+     }
 
     /* .hero-section .row-hero{
         flex-direction: column;
@@ -1044,6 +1090,7 @@ nav .fa{
 
     .hero-content{
         max-width: 100%;
+        
     }
 
     .hero-content .hero-title{
@@ -1055,21 +1102,20 @@ nav .fa{
         padding-bottom: 10px;
     }
 
-    .hero-content .hero-buttons{
-        flex-direction: column;
+    .hero-content .hero-buttons, .success-section .hero-buttons {
+        /* flex-direction: column; */
         gap: 15px;
         width: 100%;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        flex-wrap: nowrap;
     }
 
-    .hero-content .hero-btn{
+    .hero-content .hero-btn, .success-section .hero-btn{
         width: auto;
         text-align: center;
         padding: 12px 30px;
     }
-
-   
 
     /*----- Mobile Animation -----*/
     .hero-col:first-child, .hero-col:last-child{
@@ -1142,15 +1188,16 @@ nav .fa{
     }
 
     .cta-buttons{
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 15px;
         width: 100%;
         justify-content: center;
     }
 
    .cta-section .cta-buttons .hero-btn{
-        width: 100%;
+        width: auto;
         text-align: center;
+        padding: 12px 30px;
     }
 
     /*-------- Footer Section --------*/
@@ -1208,17 +1255,18 @@ nav .fa{
     }
 
     .nav-links ul{
-        padding: 20px;
+        padding: var(--font-size-hero);
+        
     }
 
-    .nav-links ul li{
+    .nav-links ul li:not(.nav-mobile-donate){
         display: block;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
-    .nav-links ul li a{
-    color: var(--dark-color);
-    font-size: var(--font-size-m);
+    .nav-links ul li:not(.nav-mobile-donate) a{
+        color: var(--dark-color);
+        font-size: var(--font-size-m);
     }
 
     nav .fa{
@@ -1227,6 +1275,29 @@ nav .fa{
         font-size: var(--font-size-l);
         cursor: pointer;
     }
+
+    .nav-donate-btn{
+        display: none;
+    }
+
+    .nav-mobile-donate{
+        display: block;
+        margin-top: 15px;
+    }
+
+     .nav-mobile-donate a{
+        display: inline-block;
+        background: var(--white-color);
+        color: var(--dark-color);
+        padding: 10px 24px;
+        border-radius: var(--border-radius-s);
+        text-decoration: none;
+     }
+
+     .nav-mobile-donate a:hover{
+        background: var(--primary-color);
+        color: var(--white-color);
+     }
 
     /*-------- Hero Styling --------*/
     /* .hero-col .hero-title{
