@@ -1,14 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--body-font);
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 :root {
+  --heading-font: "Fraunces", serif;
+  --body-font: "Poppins", sans-serif;
+
   /* Colors */
   --white-color: #fff;
   --primary-color: #347827;
@@ -50,17 +53,23 @@
 }
 
 /*-------- Large Screen Styling --------*/
-@media screen and (min-width: 1400px) {
+/* @media screen and (min-width: 1400px) {
   .hero-section {
     max-width: var(--site-max-width);
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+} */
 
 .header {
   min-width: 100%;
 }
 
-/*-------- Nav Styling --------*/
+section h1 {
+  font-family: var(--heading-font);
+}
+
+/* #region -------- Nav Styling --------*/
 nav {
   display: flex;
   padding: 0.1% 6%;
@@ -154,6 +163,8 @@ nav .fa {
   visibility: visible;
 }
 
+/*  */
+
 /*-------- Hero Section Styling --------*/
 /* .hero-section, */
 .success-section {
@@ -204,6 +215,24 @@ nav .fa {
 .hero-section {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--footer-hover-color),
+      var(--image-hover-color)
+    ),
+    url(images/Students-Discussing-in-library.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-position: center;
+  background-size: cover;
+  animation: slideInUp 2s ease-in-out;
 }
 
 .hero-slide {
@@ -283,26 +312,6 @@ nav .fa {
 }
 
 /*-------- Hero Section Styling --------*/
-.hero-section {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0 0 75px;
-  padding: 0 8%;
-  display: flex;
-  align-items: center;
-  background-image:
-    linear-gradient(
-      150deg,
-      var(--footer-hover-color),
-      var(--image-hover-color)
-    ),
-    url(images/Students-Discussing-in-library.jpeg);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-position: center;
-  background-size: cover;
-}
-
 .hero-content {
   padding-top: 0;
   margin-bottom: 12px;
@@ -380,10 +389,6 @@ nav .fa {
   animation: slideInRight 3s ease-out;
 }
 
-.hero-section {
-  animation: slideInUp 2s ease-in-out;
-}
-
 .hero-content {
   animation: slideInUp 3s ease-out;
 }
@@ -452,7 +457,7 @@ nav .fa {
   transform: translateY(0);
 }
 .our-services-col,
-.partner-col,
+/* .partner-col ,*/
 .impact-col {
   opacity: 0;
   transform: translateY(60px);
@@ -462,7 +467,7 @@ nav .fa {
 }
 
 .our-services-col.visible,
-.partner-col.visible,
+/* .partner-col.visible, */
 .impact-col.visible {
   opacity: 1;
   transform: translateY(0);
@@ -480,7 +485,7 @@ nav .fa {
 }
 
 /* Delay each partner card  */
-.partner-col:nth-child(1) {
+/* .partner-col:nth-child(1) {
   transition-delay: 0s;
 }
 .partner-col:nth-child(2) {
@@ -488,7 +493,7 @@ nav .fa {
 }
 .partner-col:nth-child(3) {
   transition-delay: 0.8s;
-}
+} */
 
 /* Delay each impact card */
 .impact-col:nth-child(1) {
@@ -635,7 +640,7 @@ nav .fa {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0 50px;
+  margin: 30px 0 20px;
   gap: 40px;
   margin: auto;
   width: 95%;
@@ -665,12 +670,59 @@ nav .fa {
   color: var(--dark-color);
 }
 
+.partners-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+  margin: 30px auto 50px;
+}
+
+.partners-marquee .row-partners {
+  width: max-content;
+  margin: 0;
+  animation: slide-partners 20s linear infinite;
+}
+
+@keyframes slide-partners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.partners-marquee::before,
+.partners-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partners-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--white-color), transparent);
+}
+
+.partners-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--white-color), transparent);
+}
+
+.partners-marquee .row-partners:hover {
+  animation-play-state: paused;
+}
+
 /*-------- Our Impact Section  --------*/
 .impact-section {
   width: 80%;
   margin: auto;
   text-align: center;
-  padding: 100px 0 0;
+  padding: 60px 0 0;
 }
 
 .row-impact {
@@ -1262,9 +1314,14 @@ nav .fa {
 
   /*-------- Our Partners --------*/
   .row-partners {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     width: 100%;
+  }
+
+  .partners-marquee::before,
+  .partners-marquee::after {
+    width: 15px;
   }
 
   /*-------- CTA Section --------*/
@@ -1485,6 +1542,10 @@ nav .fa {
   }
   .partner-col .partner-name {
     font-size: 14px;
+  }
+
+  .row-partners {
+    width: 10%;
   }
 
   /*-------- CTA Section --------*/
