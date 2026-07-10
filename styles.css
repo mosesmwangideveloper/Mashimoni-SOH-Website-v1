@@ -72,7 +72,7 @@ section h1 {
 /* #region -------- Nav Styling --------*/
 nav {
   display: flex;
-  padding: 0.1% 6%;
+  padding: 1.2% 6%;
   justify-content: space-between;
   align-items: center;
 }
@@ -1155,6 +1155,235 @@ nav .fa {
   height: 75vh;
 }
 
+/*-------- Our Programmes --------*/
+.programmes-page .programmes-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--image-hover-color),
+      var(--footer-hover-color)
+    ),
+    url(images/student-reading.jpeg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.programmes-page .programmes-banner .logo-icon {
+  border-radius: var(--border-radius-s);
+}
+
+.programmes-page .programmes-banner nav {
+  background: transparent;
+}
+
+.programmes-page
+  .programmes-banner
+  nav
+  .nav-links
+  ul
+  li:not(.nav-mobile-donate)
+  a,
+.programmes-page .programmes-banner .nav-donate-btn,
+.programmes-page .programmes-banner nav .fa-bars {
+  color: var(--white-color);
+}
+
+.programmes-page .banner-content {
+  padding: 0 8%;
+  color: var(--white-color);
+}
+
+.programmes-page .breadcrumb {
+  font-size: var(--font-size-s);
+  margin-top: 15px;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.programmes-page .breadcrumb a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.programmes-page .banner-content h1 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 12px;
+}
+
+.programmes-page .banner-content p {
+  font-size: var(--font-size-n);
+}
+
+/*--- Filter tags ---*/
+.programme-filters-section {
+  width: 85%;
+  margin: 60px auto 20px;
+  text-align: center;
+}
+
+.programmes-intro {
+  /*  max-width: 700px; */
+  margin: 0 auto 30px;
+  color: var(--darks-color);
+  font-size: var(--font-size-n);
+  line-height: 1.7;
+}
+
+.programme-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.programme-filters .filter-tags {
+  border: 1px solid var(--dark-color);
+  background: transparent;
+  color: var(--dark-color);
+  padding: 8px 20px;
+  border-radius: var(--border-radius-s);
+  font-size: var(--font-size-s);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-tags:hover,
+.filter-tags.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/*--- Programme rows ---*/
+.programmes-list {
+  width: 84%;
+  margin: 40px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.programme-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.programme-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.programme-row-media,
+.programme-row-content {
+  flex: 1;
+}
+
+.programme-row-media img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--border-radius-xs);
+}
+
+.programme-eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-n);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.programme-row-content h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-l);
+  margin-bottom: 10px;
+}
+
+.programme-copy {
+  color: var(--dark-color);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.progamme-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 0;
+}
+
+.programme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-s);
+  color: var(--dark-color);
+  background: var(--light-color-v1);
+  padding: 6px 14px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius-s);
+}
+
+.programme-row.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.programme-row.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-section {
+  width: 70%;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.testimonial-section .fa-quote-left {
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.testimonial-quote {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-l);
+  line-height: 1.6;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+}
+
+.testimonial-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: var(--border-radius-l);
+  border: 1px solid var(--dark-color);
+  margin-bottom: 15px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.testimonial-author {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+}
+
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
@@ -1189,6 +1418,7 @@ nav .fa {
     margin: 10px;
     font-size: var(--font-size-l);
     cursor: pointer;
+    color: var(--dark-color);
   }
 
   .nav-donate-btn {
@@ -1207,6 +1437,11 @@ nav .fa {
     padding: 10px 24px;
     border-radius: var(--border-radius-s);
     text-decoration: none;
+  }
+
+  .nav-mobile-donate a:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
   }
 
   .hero-slide {
@@ -1387,6 +1622,47 @@ nav .fa {
   }
   .impact-col {
     flex-basis: 100%;
+  }
+
+  /*----- Programmes Section -----*/
+  .programmes-page .programmes-banner {
+    min-height: 25vh;
+  }
+
+  .programmes-page .programmes-banner h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .programmes-page
+    .programmes-banner
+    nav
+    .nav-links
+    ul
+    li:not(.nav-mobile-donate)
+    a,
+  .programmes-page .programmes-banner .nav-donate-btn,
+  .programmes-page .programmes-banner nav {
+    color: var(--dark-color);
+  }
+
+  .programme-row,
+  .programme-row:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .programmes-list,
+  .programme-filters-section,
+  .testimonial-section {
+    width: 90%;
+  }
+
+  .testimonial-section .testimonial-quote {
+    font-size: var(--font-size-m);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    /* align-items: center; */
   }
 }
 
@@ -1572,5 +1848,27 @@ nav .fa {
 
   .footer-col {
     width: 100%;
+  }
+
+  /*-------- Programmes Section --------*/
+  .programmes-page .programmes-banner {
+    min-height: 30vh;
+  }
+
+  .programme-row,
+  .programme-row:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .programmes-page
+    .programmes-banner
+    nav
+    .nav-links
+    ul
+    li:not(.nav-mobile-donate)
+    a,
+  .programmes-page .programmes-banner .nav-donate-btn,
+  .programmes-page .programmes-banner nav {
+    color: var(--dark-color);
   }
 }

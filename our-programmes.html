@@ -31,51 +31,44 @@
     />
   </head>
 
-  <body>
+  <body class="programmes-page">
     <main>
       <section class="header">
-        <nav>
-          <a href="index.html"
-            ><img
-              src="images/YouthRiseChangemakers-Logo.png"
-              alt="YouthRiseChange Makers Logo Icon"
-              class="logo-icon"
-          /></a>
+        <section class="programmes-banner">
+          <nav>
+            <a href="index.html"
+              ><img
+                src="images/YouthRiseChangemakers-Logo-v2.png"
+                alt="YouthRiseChange Makers Logo Icon"
+                class="logo-icon"
+            /></a>
 
-          <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Programmes</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Partner</a></li>
-              <li class="nav-mobile-donate"><a href="#">Donate</a></li>
-            </ul>
-          </div>
-          <a href="#" class="nav-donate-btn">Donate</a>
-          <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
-        </nav>
+            <div class="nav-links" id="navLinks">
+              <i
+                class="fa fa-times"
+                aria-hidden="true"
+                onclick="hideMenu()"
+              ></i>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Programmes</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Partner</a></li>
+                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-donate-btn">Donate</a>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+          </nav>
 
-        <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+          <div class="overlay" id="overlay" onclick="hideMenu()"></div>
 
-        <section
-          class="programmes-banner"
-          style="
-            background-image:
-              linear-gradient(
-                150deg,
-                var(--footer-hover-color),
-                var(--image-hover-color)
-              ),
-              url(images/Students-Discussing-in-library.jpeg);
-          "
-        >
           <div class="banner-content">
             <p class="breadcrumb">
-              <a href="index.html">Home</a>/ Our Programmes
+              <a href="index.html">Home</a> / Our Programmes
             </p>
             <h1>Our Programmes</h1>
             <p>
@@ -86,493 +79,317 @@
         </section>
       </section>
 
-      <!------- WHAT WE BUILD SECTION------->
-      <section class="our-services" id="services">
-        <h1 class="fade-up">What We Build In Mathare</h1>
-        <p class="fade-up">
-          Here's what we're building in Mathare to empower the community and
-          create lasting change.
+      <!------- FILTER TAGS------->
+      <section class="programme-filters-section">
+        <p class="programmes-intro fade-up">
+          From a quiet library corner to a chessboard mid-match, every programme
+          is a door we keep open for the children, youth, and families of
+          Mathare.
         </p>
 
-        <div class="row-our-services">
-          <div class="our-services-col">
+        <div class="programme-filters">
+          <button class="filter-tags active" data-filter="all">
+            All programmes
+          </button>
+          <button class="filter-tags" data-filter="education">Education</button>
+          <button class="filter-tags" data-filter="chess">Chess</button>
+          <button class="filter-tags" data-filter="debate">
+            Debate & Discussion
+          </button>
+          <button class="filter-tags" data-filter="community">Community</button>
+          <button class="filter-tags" data-filter="girls-empowerment">
+            Girls' Empowerment
+          </button>
+        </div>
+      </section>
+
+      <!------- PROGRAMMES LIST ------->
+      <section class="programmes-list" id="services">
+        <!---- Evening Library & Learning Hub --->
+        <div class="programme-row fade-up" data-category="education">
+          <div class="programme-row-media">
             <img
               src="images/safe-learning-spaces.jpeg"
-              alt="Library Books"
-              class="our-services-image"
+              alt="Children reading in the library"
             />
-            <h3>Evening Library & Learning Hub</h3>
-            <p>
-              A safe, welcoming space where kids and teens read, learn, and grow
-              — with books, resources, and quiet study space.
-            </p>
           </div>
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Education</span>
+            <h2>Evening Library & Learning Hub</h2>
+            <p class="programme-copy">
+              Some children walk through a door and find a library. Ours walk
+              through a door and find belonging. Warm light, quiet corners,
+              shelves stacked with worlds waiting to be opened — every evening,
+              this room turns a hard day into a fresh start. No book stays
+              unread here. No child sits unseen.
+            </p>
+            <div class="progamme-badges">
+              <span class="programme-badge"
+                ><i class="fa fa-clock-o" aria-hidden="true"></i> Open
+                daily</span
+              >
+              <span class="programme-badge"
+                ><i class="fa fa-users" aria-hidden="true"></i> All ages -
+                children, teens & adults</span
+              >
+              <span class="programme-badge"
+                ><i class="fa fa-map-marker" aria-hidden="true"></i> Mashimoni
+                Library</span
+              >
+            </div>
+            <button
+              class="read-more-btn"
+              onclick="openProgrammeModal('library')"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
 
-          <div class="our-services-col">
+        <!---- Group Discussions --->
+        <div class="programme-row fade-up" data-category="debate community">
+          <div class="programme-row-media">
             <img
               src="images/group-discussions.jpeg"
-              alt="Library Books"
-              class="our-services-image"
+              alt="Youth in a group discussions"
             />
-            <h3>Group Discussions</h3>
-            <p>
-              Real conversations. Bold opinions. Critical thinking. We give
-              every young person a voice — and the courage to use it.
-            </p>
           </div>
 
-          <div class="our-services-col">
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Community</span>
+            <h2>Group Discussions</h2>
+            <p class="programme-copy">
+              Give a child a topic, and watch them find their voice. In every
+              circle, opinions are welcomed, not corrected. Kids learn to
+              disagree with respect, listen without interrupting, and speak up
+              like their ideas matter — because they do. This is where
+              confidence gets its first rehearsal.
+            </p>
+
+            <div class="programme-badges">
+              <span class="programme-badge">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> Held daily
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-users" aria-hidden="true"></i> All ages
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Mashimoni Library
+              </span>
+            </div>
+            <button
+              class="read-more-btn"
+              onclick="openProgrammeModal('discussions')"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!---- E-learning Sessions --->
+        <div class="programme-row fade-up" data-category="education">
+          <div class="programme-row-media">
             <img
               src="images/Zoom-sessions.jpeg"
-              alt="Zooms Sessions"
-              class="our-services-image"
+              alt="Student in an e-learning session"
             />
-            <h3>E-Learning Sessions</h3>
-            <p>
-              One screen. World-class educators. Right here in Mathare. Learning
-              has no borders when curiosity leads the way.
+          </div>
+
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Education</span>
+            <h2>E-learning Sessions</h2>
+            <p class="programme-copy">
+              A laptop. A signal. And suddenly, the whole world is in the room.
+              Through live e-learning sessions, students in Mathare sit
+              shoulder-to-shoulder — virtually — with educators who believe
+              geography should never decide how far a child can go.
             </p>
+
+            <div class="programme-badges">
+              <span class="programme-badge">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> During school
+                holidays
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-users" aria-hidden="true"></i> All ages
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Mashimoni Library
+              </span>
+            </div>
+            <button
+              class="read-more-btn"
+              onclick="openProgrammeModal('elearning')"
+            >
+              Learn More
+            </button>
           </div>
         </div>
 
-        <div class="row-our-services">
-          <div class="our-services-col">
+        <!---- Chess Training & Competitions --->
+        <div class="programme-row fade-up" data-category="chess">
+          <div class="programme-row-media">
             <img
               src="images/chess-competion.jpg"
-              alt="Library Books"
-              class="our-services-image"
+              alt="Children playing chess"
             />
-            <h3>Chess Training & Competitions</h3>
-            <p>
-              Strategy. Patience. One move at a time. Chess teaches us as youth
-              to think, plan, and compete — fearlessly.
-            </p>
           </div>
 
-          <div class="our-services-col">
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Chess</span>
+            <h2>Chess Training & Competitions</h2>
+            <p class="programme-copy">
+              Every match starts the same way: one pawn, one decision. But what
+              a child learns on this board — patience, focus, the courage to
+              think three moves ahead — follows them long after the game ends.
+              Here, Mathare's next grandmasters are already making their opening
+              moves.
+            </p>
+
+            <div class="programme-badges">
+              <span class="programme-badge">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> Wednesdays &
+                Fridays
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-users" aria-hidden="true"></i> All ages
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Mashimoni Library
+              </span>
+            </div>
+            <button class="read-more-btn" onclick="openProgrammeModal('chess')">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!---- Debate Competitions --->
+        <div class="programme-row fade-up" data-category="debate">
+          <div class="programme-row-media">
             <img
               src="images/debate-competitons.jpeg"
-              alt="Library Books"
-              class="our-services-image"
+              alt="Students in a debate competition"
             />
-            <h3>Debate Competitions</h3>
-            <p>
-              Speak up. Stand firm. Win the room. We teach students that their
-              voice deserves to be heard.
-            </p>
           </div>
 
-          <div class="our-services-col">
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Debate</span>
+            <h2>Debate Competitions</h2>
+            <p class="programme-copy">
+              Give them a microphone, and they'll give you a reason to believe.
+              In every debate, students learn to build an argument, hold their
+              ground, and win a room with nothing but words and conviction. This
+              is where young voices become impossible to ignore.
+            </p>
+
+            <div class="programme-badges">
+              <span class="programme-badge">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> Scheduled
+                through the term
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-users" aria-hidden="true"></i> All ages
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Venue varies
+              </span>
+            </div>
+            <button
+              class="read-more-btn"
+              onclick="openProgrammeModal('debate')"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!---- Girls' Empowerment --->
+        <div
+          class="programme-row fade-up"
+          data-category="community girls-empowerment"
+        >
+          <div class="programme-row-media">
             <img
               src="images/girls-club-sessions.jpeg"
-              alt="Zooms Sessions"
-              class="our-services-image"
+              alt="Girls' Club Sessions"
             />
-            <h3>Girls' Club Sessions</h3>
-            <p>
-              A safe circle. No judgment. Just honest conversations about
-              rights, dreams, and the futures they are boldly building.
+          </div>
+
+          <div class="programme-row-content">
+            <span class="programme-eyebrow">Girls' Empowerment</span>
+            <h2>Girls' Club Sessions</h2>
+            <p class="programme-copy">
+              A closed door. An open conversation. In this circle, girls talk
+              about the things that matter most — their bodies, their
+              boundaries, their futures — without shame and without judgment.
+              Here, every girl leaves a little braver than she arrived.
             </p>
+
+            <div class="programme-badges">
+              <span class="programme-badge">
+                <i class="fa fa-clock-o" aria-hidden="true"></i> Weekly
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-users" aria-hidden="true"></i> Girls, all ages
+              </span>
+              <span class="programme-badge">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Mashimoni Library
+              </span>
+            </div>
+            <button
+              class="read-more-btn"
+              onclick="openProgrammeModal('girlsclub')"
+            >
+              Learn More
+            </button>
           </div>
         </div>
       </section>
 
-      <!------- Our History ------->
-      <!--  <section class="history-section">
-      <div class="row-history">
-        <div class="history-col">
-          <h2 class="history-title">Our History</h2>
-          <h3 class="history-sub-title">From One Small Library to a Lifetime of Change</h3>
-          <p class="history-description">
-          <strong>YouthRiseChangeMakers<em></strong> (Mashimoni School of Hope)</em> was born out of a simple observation: too many children in Mathare were missing school due to financial challenges, lack of safe learning spaces, and limited opportunities for growth. What began as a small community library where children could read, study, and dream has grown into a vibrant center of hope — a lifeline for families that combines education, mentorship, and extracurricular activities.
-          <br>
-         
-          Over the years, we’ve witnessed firsthand how consistent support and care can transform young lives. Through the generous partnership of organizations such as <strong>ChallengeAid</strong> and <strong>Education in a Suitcase</strong>, as well as the digital learning platform <strong>Tutor-Web</strong>, our learners have been able to thrive academically and personally. These collaborations have provided access to digital lessons, mentorship, and essential resources that continue to nurture both academic and personal development.
-         
-          <br>
-          Beyond education, these partnerships have made a tangible difference in daily life — from <strong>weekly shopping distributions</strong> and <strong>sanitary towels for girls</strong>, to programs like the Girls and Boys Club, <strong>Mathare Got Talent</strong>, and engaging Zoom lessons that keep learning alive even outside the classroom.
-          <br>
-          
-          Today, YouthRiseChangeMakers <em>(Mashimoni School of Hope)</em> proudly serves hundreds of children and families. Together with our partners and supporters, we continue to prove that when a community invests in its young people — giving them the tools, guidance, and opportunities they deserve — transformation is not just possible, it’s inevitable.
-
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#" class="hero-btn side-btn">Sponsor A Child</a>
-            <a href="#" class="hero-btn">Partner With Us</a>
-          </div>
-
-        </div>
-    </section> -->
-
-      <!------- Our Partners Section ------->
-      <section class="partners-section">
-        <h1>Our Partners</h1>
-        <p>
-          We are grateful for the support of our partners who help us empower
-          youth and create lasting change in Mathare.
+      <!------- Testimonial Section ------->
+      <section class="testimonial-section">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <p class="testimonial-quote fade-up">
+          I didn't just learn to read in this library — I learned to think
+          ahead, on the chessboard and in life. Now I get to open that same door
+          for the next child.
         </p>
+        <img
+          src="images/david-oduor.jpg"
+          alt="David Oduor"
+          class="testimonial-photo"
+        />
 
-        <div class="partners-marquee">
-          <div class="row-partners">
-            <div class="partner-col">
-              <img
-                src="images/ChallengeAid-Logo.png"
-                alt="ChallengeAid Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">ChallengeAid</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/mashimoni-library-logo.png"
-                alt="Mashimoni Library Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Mashimoni Library</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/boards-lords-chess-club-logo.png"
-                alt="Board Lords Chess Club Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Board Lords Chess Club</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/smiley-tutor-web-logo.png"
-                alt="Smiley Tutor Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Tutor Web</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/ChallengeAid-Logo.png"
-                alt="ChallengeAid Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">ChallengeAid</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/mashimoni-library-logo.png"
-                alt="Mashimoni Library Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Mashimoni Library</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/boards-lords-chess-club-logo.png"
-                alt="Board Lords Chess Club Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Board Lords Chess Club</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/smiley-tutor-web-logo.png"
-                alt="Smiley Tutor Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Tutor Web</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/ChallengeAid-Logo.png"
-                alt="ChallengeAid Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">ChallengeAid</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/mashimoni-library-logo.png"
-                alt="Mashimoni Library Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Mashimoni Library</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/boards-lords-chess-club-logo.png"
-                alt="Board Lords Chess Club Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Board Lords Chess Club</h3>
-            </div>
-
-            <div class="partner-col">
-              <img
-                src="images/smiley-tutor-web-logo.png"
-                alt="Smiley Tutor Logo"
-                class="partner-logo"
-              />
-              <h3 class="partner-name">Tutor Web</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!------- Our Impact Section ------->
-      <section class="impact-section">
-        <h1 class="fade-up">Our Impact</h1>
-        <p class="fade-up">Real numbers behind real change in Mathare.</p>
-
-        <div class="row-impact">
-          <div class="impact-col fade-up">
-            <h2 class="impact-number" data-target="500">0</h2>
-            <p class="impact-label">Childen & Youth Reached</p>
-          </div>
-
-          <div class="impact-col fade-up">
-            <h2 class="impact-number" data-target="7">0</h2>
-            <p class="impact-label">Years Runnings</p>
-          </div>
-
-          <div class="impact-col fade-up">
-            <h2 class="impact-number" data-target="6">0</h2>
-            <p class="impact-label">Programs Offered</p>
-          </div>
-
-          <div class="impact-col fade-up">
-            <h2 class="impact-number" data-target="3">0</h2>
-            <p class="impact-label">Partner Organisations</p>
-          </div>
-        </div>
-      </section>
-
-      <!------- Success Story Section ------->
-      <section class="success-section">
-        <h1 class="fade-up">Our Success Stories</h1>
-        <p class="fade-up">
-          From Mathare to lasting change — see how we're empowering youth
-          through education, mentorship, and community.
+        <p class="testimonial-author fade-up">
+          David Oduor — Founder & Programs Lead, once a student at Mashimoni
+          School of Hope
         </p>
-
-        <div class="row-success">
-          <div class="success-col">
-            <h2 class="success-title">Where Hope Lives</h2>
-            <h3 class="success-sub-title">
-              One small library is quietly rewriting futures across Mathare
-            </h3>
-            <p class="success-description">
-              Behind a modest doorway in Mathare, children step out of chaos and
-              into calm. Here, they find more than books — they find mentors who
-              listen, a community that shows up, and the quiet, steady support
-              that turns everyday struggle into a real shot at a different
-              future.
-            </p>
-
-            <div class="hero-buttons">
-              <a href="#" class="hero-btn side-btn">Donate</a>
-              <a href="#" class="hero-btn">Read More Stories</a>
-            </div>
-          </div>
-
-          <div class="success-col vedio-col">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/IDX6xxbkaJo?si=fbEeDjoWBXKh19aC"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
       </section>
 
-      <!------- Our Team Section ------->
-      <section class="team-section">
-        <h1 class="fade-up">Meet The Team</h1>
-        <p class="fade-up">The People Turning Hope Into Action</p>
-        <p class="team-into fade-up">
-          Behind every child who discovers a love for reading, every young
-          person who finds their confidence, and every program that creates
-          lasting change — is a team that believes transformation starts with
-          people.
-        </p>
-
-        <div class="row-team team-grid">
-          <!-- David Odour -->
-          <div class="team-col">
-            <img
-              src="images/david-oduor.jpg"
-              alt="David Oduor, Founder"
-              class="team-photo"
-            />
-            <span class="founder-badge">Founder</span>
-            <h3 class="team-name">David Odour</h3>
-            <h4 class="team-role">Founder & Programs Lead</h4>
-            <p class="team-quote">
-              "I didn't just learn to read in this library — I learned to think
-              ahead, on the chessboard and in life. Now I get to open that same
-              door for the next child."
-            </p>
-            <p class="team-teaser">
-              David grew up right here in Mathare — and once sat where these
-              students sit today. Now he leads the mission, turning chessboards
-              and library shelves into launchpads for the next generation.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('david')">
-              Read Full Story
-            </button>
-          </div>
-
-          <!-- Kevin Olengo -->
-          <div class="team-col">
-            <img
-              src="images/kevin-olengo.jpg"
-              alt="Kevin Olengo"
-              class="team-photo"
-            />
-            <h3 class="team-name">Kevin Olengo</h3>
-            <h4 class="team-role">Community Engagement & Partnerships</h4>
-            <p class="team-quote">
-              "Change doesn't happen to a community — it happens with one."
-            </p>
-            <p class="team-teaser">
-              Kevin believes real change starts when communities work together —
-              and he's the one building those bridges.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('kevin')">
-              Read Full Story
-            </button>
-          </div>
-
-          <!-- Damaris Adhiambo -->
-          <div class="team-col">
-            <img
-              src="images/damaris-adhiambo.jpeg"
-              alt="Damaris Adhiambo"
-              class="team-photo"
-            />
-            <h3 class="team-name">Damaris Adhiambo</h3>
-            <h4 class="team-role">Education & Child Development</h4>
-            <p class="team-quote">
-              "Every child deserves a room where they feel like they belong."
-            </p>
-            <p class="team-teaser">
-              Damaris creates classrooms where every child feels safe enough to
-              dream — and supported enough to try.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('damaris')">
-              Read Full Story
-            </button>
-          </div>
-
-          <!-- Nephine Nephine -->
-          <div class="team-col">
-            <img src="images/nephine.jpg" alt="Nephine" class="team-photo" />
-            <h3 class="team-name">Nephine Nephine</h3>
-            <h4 class="team-role">Youth Empowerment Coordinator</h4>
-            <p class="team-quote">
-              "Your circumstances are not your future — I'm here to prove that."
-            </p>
-            <p class="team-teaser">
-              Nephine helps young people find their voice — and the courage to
-              lead with it.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('nephine')">
-              Read Full Story
-            </button>
-          </div>
-
-          <!-- David Kanguto -->
-          <div class="team-col">
-            <img
-              src="images/David-kanguto.jpeg"
-              alt="David Kanguto"
-              class="team-photo"
-            />
-            <h3 class="team-name">David Kanguto</h3>
-            <h4 class="team-role">Operations & Community Programs</h4>
-            <p class="team-quote">
-              "Impact isn't glamorous. It's showing up, every single day."
-            </p>
-            <p class="team-teaser">
-              David keeps the wheels turning behind the scenes — turning big
-              ideas into daily impact for the families who need it.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('kanguto')">
-              Read Full Story
-            </button>
-          </div>
-
-          <!-- Jimmy Odhiambo -->
-          <div class="team-col">
-            <img
-              src="images/jimmy.jpeg"
-              alt="James Odhiambo"
-              class="team-photo"
-            />
-            <h3 class="team-name">James Ochieng</h3>
-            <h4 class="team-role">Head Coach, BoardLords Chess Club</h4>
-            <p class="team-quote">
-              "A queen sacrificed is not a queen lost — it's a lesson the board
-              just taught you."
-            </p>
-            <p class="team-teaser">
-              James turns thirty-two black-and-white squares into a classroom —
-              where every move a child makes builds the patience and foresight
-              they'll need far beyond the game.
-            </p>
-            <button class="read-more-btn" onclick="openTeamModal('james')">
-              Read Full Story
-            </button>
-          </div>
-
-          <p class="team-closing fade-up">
-            Every child deserves the chance to learn. Every young person
-            deserves the chance to lead. Every community deserves hope. Together
-            with our volunteers, partners, and the families we serve — we're
-            building that future, one learner at a time.
-          </p>
-        </div>
-      </section>
-
-      <!-- Team Bio Modal -->
+      <!--- Programme Detail Modal --->
       <div
         class="team-modal-overlay"
-        id="teamModalOverlay"
-        onclick="closeTeamModal(event)"
+        id="programmeModalOverlay"
+        onclick="closeProgrammeModal(event)"
       >
         <div class="team-modal">
-          <span class="team-modal-close" onclick="closeTeamModal()"
+          <span class="team-modal-close" onclick="closeProgrammeModal()"
             >&times;</span
           >
-          <img src="" alt="" id="modalPhoto" class="modal-photo" />
-          <h3 id="modalName"></h3>
-          <h4 id="modalRole"></h4>
-          <p id="modalQuote" class="team-quote"></p>
-          <div id="modalBio"></div>
+          <img src="" alt="" id="modalProgrammePhoto" class="modal-photo" />
+          <h3 id="modalProgrammeName"></h3>
+          <h4 id="modalProgrammeMeta"></h4>
+          <div id="modalProgrammeBio"></div>
         </div>
       </div>
 
-      <!------- CTA Section ------->
+      <!---------CTA Section------->
       <section class="cta-section">
         <h1 class="fade-up">Join Us In Empowering Mathare</h1>
         <p class="fade-up">
@@ -580,9 +397,10 @@
           volunteer to make a lasting impact in the community.
         </p>
 
-        <div class="cta-buttons">
-          <a href="#" class="hero-btn cta-btn">Donate</a>
+        <div class="cta-buttons fade-up">
+          <a href="#" class="hero-btn cta-btn">Volunteer</a>
           <a href="#" class="hero-btn cta-btn">Partner With Us</a>
+          <a href="#" class="hero-btn cta-btn">Donate</a>
         </div>
       </section>
 

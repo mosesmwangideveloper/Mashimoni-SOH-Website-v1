@@ -38,7 +38,7 @@ if (scrollArrow) {
 
 // Slide in animation on scroll for services cards
 const serviceCards = document.querySelectorAll(
-  ".our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col, .impact-col",
+  ".our-services-col, .fade-up, .partner-col, .cta-section .cta-buttons .hero-btn, .team-col, .impact-col, .programme-row",
 );
 
 const observer = new IntersectionObserver(
@@ -184,3 +184,103 @@ const imapctObserver = new IntersectionObserver(
 );
 
 impactNumbers.forEach((num) => imapctObserver.observe(num));
+
+// Programme detail data
+const programmesData = {
+  library: {
+    name: "Evening Library & Learning Hub",
+    meta: "Open daily · All ages · Mashimoni Library",
+    photo: "images/safe-learning-spaces.jpeg",
+    bio: `<p>Some children walk through a door and find a library. Ours walk through a door and find belonging.</p>
+        <p>Warm light, quiet corners, and shelves stacked with worlds waiting to be opened — every evening, this room turns a hard day into a fresh start. Children, teens, and even adults from the community come to read, study, and simply have a safe place to be.</p>
+        <p>No book stays unread here. No child sits unseen.</p>`,
+  },
+  discussions: {
+    name: "Group Discussions",
+    meta: "Held daily · All ages · Mashimoni Library",
+    photo: "images/group-discussions.jpeg",
+    bio: `<p>Give a child a topic, and watch them find their voice.</p>
+        <p>In every circle, opinions are welcomed, not corrected. Kids learn to disagree with respect, listen without interrupting, and speak up like their ideas matter — because they do.</p>
+        <p>This is where confidence gets its first rehearsal, one honest conversation at a time.</p>`,
+  },
+  elearning: {
+    name: "E-Learning Sessions",
+    meta: "During school holidays · All ages · Mashimoni Library",
+    photo: "images/Zoom-sessions.jpeg",
+    bio: `<p>A laptop. A signal. And suddenly, the whole world is in the room.</p>
+        <p>Through live e-learning sessions, students in Mathare sit shoulder-to-shoulder — virtually — with educators who believe geography should never decide how far a child can go.</p>
+        <p>Sessions run whenever school is out, turning holiday downtime into a head start.</p>`,
+  },
+  chess: {
+    name: "Chess Training & Competitions",
+    meta: "Wednesdays & Fridays · All ages · Mashimoni Library",
+    photo: "images/chess-competion.jpg",
+    bio: `<p>Every match starts the same way: one pawn, one decision.</p>
+        <p>But what a child learns on this board — patience, focus, the courage to think three moves ahead — follows them long after the game ends. Coached by BoardLords Chess Club, students train twice a week and compete against other Schools of Hope and schools across Kenya.</p>
+        <p>Here, Mathare's next grandmasters are already making their opening moves.</p>`,
+  },
+  debate: {
+    name: "Debate Competitions",
+    meta: "Scheduled through the term · All ages · Venue varies",
+    photo: "images/debate-competitons.jpeg",
+    bio: `<p>Give them a microphone, and they'll give you a reason to believe.</p>
+        <p>In every debate, students learn to build an argument, hold their ground, and win a room with nothing but words and conviction. Competitions are held periodically through the term, in partnership with Great Debaters.</p>
+        <p>This is where young voices become impossible to ignore.</p>`,
+  },
+  girlsclub: {
+    name: "Girls' Club Sessions",
+    meta: "Weekly · Girls, all ages · Mashimoni Library",
+    photo: "images/girls-club-sessions.jpeg",
+    bio: `<p>A closed door. An open conversation.</p>
+        <p>In this circle, girls talk about the things that matter most — their bodies, their boundaries, their futures — without shame and without judgment.</p>
+        <p>Here, every girl leaves a little braver than she arrived.</p>`,
+  },
+};
+
+const programmeModalOverlay = document.getElementById("programmeModalOverlay");
+
+function openProgrammeModal(key) {
+  const programme = programmesData[key];
+  if (!programme || !programmeModalOverlay) return;
+
+  document.getElementById("modalProgrammePhoto").src = programme.photo;
+  document.getElementById("modalProgrammePhoto").alt = programme.name;
+  document.getElementById("modalProgrammeName").textContent = programme.name;
+  document.getElementById("modalProgrammeMeta").textContent = programme.meta;
+  document.getElementById("modalProgrammeBio").innerHTML = programme.bio;
+
+  programmeModalOverlay.classList.add("active");
+}
+
+function closeProgrammeModal(event) {
+  if (
+    !event ||
+    event.target === programmeModalOverlay ||
+    event.target.classList.contains("team-modal-close")
+  ) {
+    programmeModalOverlay.classList.remove("active");
+  }
+}
+
+// Filter tags - show/hide programme rows by category
+const filterTags = document.querySelectorAll(".filter-tags");
+const programmeRows = document.querySelectorAll(".programme-row");
+
+filterTags.forEach((tag) => {
+  tag.addEventListener("click", () => {
+    filterTags.forEach((t) => t.classList.remove("active"));
+    tag.classList.add("active");
+
+    const filter = tag.getAttribute("data-filter");
+
+    programmeRows.forEach((row) => {
+      const categories = row.getAttribute("data-category");
+
+      if (filter === "all" || categories.includes(filter)) {
+        row.style.display = "flex";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  });
+});
