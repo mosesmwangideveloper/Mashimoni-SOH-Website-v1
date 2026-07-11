@@ -1384,6 +1384,230 @@ nav .fa {
   font-size: var(--font-size-s);
 }
 
+/*-------- About Us --------*/
+.programmes-page .about-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--image-hover-color),
+      var(--footer-hover-color)
+    ),
+    url(images/mashimoni-campus-together.jpg);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.about-intro-section {
+  width: 80%;
+  /*   max-width: 800px; */
+  margin: 70px auto 60px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-n);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.about-intro-section h2 {
+  color: var(--dark-color);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/*--- Mission & Vision ---*/
+.mission-vision-section {
+  width: 80%;
+  max-width: var(--site-max-width);
+  margin: 0 auto 70px;
+}
+
+.mv-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.mv-card {
+  flex: 1;
+  background: var(--light-color-v1);
+  border-radius: var(--border-radius-xs);
+  padding: 35px 30px;
+  border-left: 5px solid var(--primary-color);
+}
+
+.mv-card .mv-vision {
+  border-left-color: var(--secondary-color);
+}
+
+.mv-card h3 {
+  font-size: var(--heading-font);
+  font-size: var(--font-size-l);
+  color: var(--primary-color-v2);
+  margin-bottom: 12px;
+}
+
+.mv-card p {
+  color: var(--dark-color);
+  line-height: 1.7;
+}
+
+/*--- Our History ---*/
+.about-history-section {
+  width: 80%;
+  /*  max-width: 800px; */
+  margin: 0 auto 70px;
+}
+
+.about-history-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-history-section p {
+  color: var(--dark-color);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-history-section a {
+  color: var(--dark-color);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.about-history-section a:hover {
+  color: var(--primary-color-v1);
+}
+
+/*--- Core Values ---*/
+.core-values-section {
+  width: 80%;
+  /* max-width: var(--site-max-width); */
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.core-values-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 40px;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  background: var(--white-color);
+  border-top: 4px solid var(--primary-color-v1);
+  border-radius: var(--border-radius-xs);
+  box-shadow: 1 4px 15px var(--box-shadow-color);
+  padding: 30px 22px;
+  text-align: left;
+}
+
+.value-icon {
+  font-size: var(--font-size-hero);
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.value-icon h3 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  line-height: 1.6;
+}
+
+/*--- What We Do ---*/
+.what-we-do-section {
+  width: 80%;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.what-we-do-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+}
+
+.what-we-do-section > p {
+  color: var(--dark-color);
+  margin-bottom: 30px;
+}
+
+.what-we-do-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.wwd-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--light-color-v1);
+  color: var(--dark-color);
+  padding: 10px 18px;
+  border-radius: var(--border-radius-s);
+  font-size: var(--font-size-s);
+}
+
+.wwd-tag .fa {
+  color: var(--primary-color);
+}
+
+.wwd-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*--- Fade-up About Section ---*/
+.about-intro-section .fade-up .about-history-section .fade-up .mv-card .fade-up,
+.value-card .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.about-intro-section .fade-up .about-history-section .fade-up .mv-card .fade-up,
+.value-card .fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
@@ -1664,6 +1888,27 @@ nav .fa {
     flex-direction: column;
     /* align-items: center; */
   }
+  /*----- About Page -----*/
+  .about-intro-section {
+    text-align: left;
+  }
+  .about-intro-section,
+  .about-history-section {
+    width: 88%;
+  }
+
+  .mission-vision-section,
+  .core-values-section {
+    width: 88%;
+  }
+
+  .mv-grid {
+    flex-direction: column;
+  }
+
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*-------- Tablet Styling --------*/
@@ -1870,5 +2115,10 @@ nav .fa {
   .programmes-page .programmes-banner .nav-donate-btn,
   .programmes-page .programmes-banner nav {
     color: var(--dark-color);
+  }
+
+  /*-------- About Us --------*/
+  .core-values-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
