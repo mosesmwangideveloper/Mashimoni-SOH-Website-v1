@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashimoni School Of Hope</title>
+
+    <!-------------Linking CSS Styles ----------->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!------------Linking Google Fonts  ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------- Linking Font Awesome Styles ------------>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!---------- Linking Website Icon ------------>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png"
+      alt="YouthRiseChangeMakers Favicon Icon"
+    />
+  </head>
+
+  <body class="programmes-page">
+    <main>
+      <section class="header">
+        <section class="programmes-banner about-banner contact-banner">
+          <nav>
+            <a href="index.html"
+              ><img
+                src="images/YouthRiseChangemakers-Logo-v2.png"
+                alt="YouthRiseChange Makers Logo Icon"
+                class="logo-icon"
+            /></a>
+
+            <div class="nav-links" id="navLinks">
+              <i
+                class="fa fa-times"
+                aria-hidden="true"
+                onclick="hideMenu()"
+              ></i>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Programmes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Partner</a></li>
+                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-donate-btn">Donate</a>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+          </nav>
+
+          <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+
+          <div class="banner-content">
+            <p class="breadcrumb"><a href="index.html">Home</a> / Contact Us</p>
+            <h1>Contact Us</h1>
+            <p>
+              Have a question, want to volunteer, or ready to partner with us?
+              We would love to hear from you.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!------- INFO ------->
+      <section class="about-intro-section">
+        <span class="section-eyebrow fade-up">Get In Touch</span>
+        <h2 class="fade-up">We're Here To Answer You</h2>
+        <p class="fade-up">
+          Whether you're a parent looking for programme details, a volunteer
+          ready to give your time, or a donor who wants to know where your
+          support goes — reach out below and our team will get back to you
+          personally.
+        </p>
+      </section>
+
+      <!------- TRUST STRIP ------->
+      <section class="contact-trust-strip fade-up">
+        <span class="trust-badge">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <!-- Registered -->
+          community-based organization
+        </span>
+        <span class="trust-badge">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          We reply within 48 hours
+        </span>
+        <span class="trust-badge">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          Based in Mathare, Nairobi
+        </span>
+      </section>
+
+      <!------- CONTACT INFO CARDS ------->
+      <section class="contact-info-section">
+        <div class="contact-info-grid">
+          <div class="contact-info-card fade-up">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <h3>Visit Us</h3>
+            <p>Mashimoni, Mathare, Nairobi</p>
+          </div>
+
+          <div class="contact-info-card fade-up">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <h3>Call Us</h3>
+            <p>+254 795 063917</p>
+          </div>
+
+          <div class="contact-info-card fade-up">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <h3>Email Us</h3>
+            <p>mashimonieastafrica@gmail.com</p>
+          </div>
+
+          <div class="contact-info-card fade-up">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <h3>Opening Hours</h3>
+            <p>Mon - Sat: 7:00 AM - 9:00 PM</p>
+            <p>Sun: 5:00 PM - 9:00 PM</p>
+          </div>
+
+          <!-- <div class="contact-info-card contact-info-card-highlight fade-up">
+            <i class="fa fa-child" aria-hidden="true"></i>
+            <h3>Report a Safeguarding Concern</h3>
+            <p>+254 795 063917</p>
+            <p>mashimonieastafrica@gmail.com</p>
+          </div> -->
+        </div>
+      </section>
+
+      <!-------- MAP ------->
+      <section class="contact-map-section fade-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d249.30317284483826!2d36.861969128186445!3d-1.261849729047641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smashimoni%20!5e0!3m2!1sen!2ske!4v1783830483756!5m2!1sen!2ske"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </section>
+
+      <!---------Contact Form------->
+      <section class="contact-form-section">
+        <div class="contact-form-heading fade-up">
+          <span class="section-eyebrow">Send A Message</span>
+          <h2>Tell Us How We Can Help</h2>
+        </div>
+
+        <form action="#" class="contact-form fade-up" method="post">
+          <div class="contact-form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+          </div>
+
+          <div class="contact-form-row">
+            <select name="enquiry_type" required>
+              <option value="" disabled selected>I am a...</option>
+              <option value="Parent/Guardian">Parent or Guardian</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Donor">Donor</option>
+              <option value="Partner Organization">Partner Organization</option>
+              <option value="Media/Press">Media/Press</option>
+              <option value="Other">Other</option>
+            </select>
+            <input type="text" name="subject" placeholder="Subject" required />
+          </div>
+
+          <textarea
+            name="message"
+            placeholder="Your message"
+            required
+            rows="6"
+          ></textarea>
+
+          <button type="submit" class="hero-btn cta-btn">Send Message</button>
+        </form>
+      </section>
+
+      <!---------Partner Strip------->
+      <section class="contact-partners-section fade-up">
+        <p class="contact-partners-label">Proudly partnered by</p>
+        <div class="contact-partners-row">
+          <a href="https://www.challengeaid.org/" target="_blank"
+            >ChallengeAid</a
+          >
+          <a href="https://tutor-web.net/" target="_blank">Tutor-Web</a>
+          <span>Board Lords Chess Club</span>
+        </div>
+      </section>
+
+      <!---------FAQ ------->
+      <section class="contact-faq-section">
+        <h2 class="fade-up">Frequently Asked Questions</h2>
+
+        <div class="contact-faq-list">
+          <details class="contact-faq-item fade-up">
+            <summary>How can I donate?</summary>
+            <p>
+              You can donate through the Donate button at the top of any page,
+              or reach out to us directly and we'll walk you through the
+              options.
+            </p>
+          </details>
+
+          <details class="contact-faq-item fade-up">
+            <summary>How can I volunteer?</summary>
+            <p>
+              Send us a message using the form above and select "Volunteer" —
+              tell us your skills and availability and our team will follow up
+              with next steps.
+            </p>
+          </details>
+
+          <details class="contact-faq-item fade-up">
+            <summary>How are donated funds used?</summary>
+            <p>
+              Funds go directly toward our programmes — the library, chess
+              training, e-learning sessions, and essential support for children
+              like sanitary towels and school supplies.
+            </p>
+          </details>
+
+          <details class="contact-faq-item fade-up">
+            <summary>Can I visit Mashimoni School of Hope in person?</summary>
+            <p>
+              Yes. Reach out beforehand so we can arrange a good time — our
+              opening hours are listed above.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!---------Blank Section------->
+      <!--   <section class="blank-section">
+  </section> -->
+
+      <!---------Footer Section------->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChangeMakers Logo"
+              class="footer-logo"
+            />
+            <p>
+              YouthRiseChangeMakers exists because every young person in Mathare
+              deserves more than survival — they deserve a real shot at rising,
+              learning, and leading
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h2>Our Programs & Activities</h2>
+            <ul>
+              <li><a href="#">Evening Library & Learning Hub</a></li>
+              <li><a href="#">Group Discussions</a></li>
+              <li><a href="#">E-Learning Sessions</a></li>
+              <li><a href="#">Chess Training & Competitions</a></li>
+              <li><a href="#">Debate Competitions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <!--  <h2>Contact Us</h2>
+        <ul class="contact-list">
+          <li><i class="fa fa-phone"></i> 0771 671502</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
+          <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
+        </ul> -->
+
+            <h2>Newsletter</h2>
+            <p>Sign up now to get daily latest news & updates from us</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button class="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> YouthRiseChangeMakers |
+            Mashimoni School Of Hope. All rights reserved.
+          </p>
+        </div>
+      </section>
+
+      <!---------Linking Script File------->
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

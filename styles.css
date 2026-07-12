@@ -1608,6 +1608,237 @@ nav .fa {
   transform: translateY(0);
 }
 
+/*---- Contact Trust Strip ----*/
+.programmes-page .contact-banner {
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--image-hover-color),
+      var(--footer-hover-color)
+    ),
+    url(images/students-holding-books.jpeg);
+  background-position: center 40%;
+}
+.contact-trust-strip {
+  width: 80%;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.trust-badge {
+  background: var(--light-color-v1);
+  color: var(--primary-color-v2);
+  border-radius: var(--border-radius-s);
+  padding: 8px 18px;
+  font-size: var(--font-size-s);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/*--- Contact Info Cards ---*/
+.contact-info-section {
+  width: 80%;
+  margin: 0 auto 70px;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.contact-info-card {
+  background: var(--white-color);
+  border-left: 4px solid var(--primary-color-v1);
+  border-radius: var(--border-radius-xs);
+  box-shadow: 1px 4px 15px var(--box-shadow-color);
+  padding: 28px 22px;
+  text-align: left;
+}
+
+.contact-info-card i {
+  font-size: var(--font-size-l);
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.contact-info-card h3 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  color: var(--primary-color-v2);
+  margin-bottom: 8px;
+}
+
+.contact-info-card p {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  margin: 2px 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.contact-info-card-highlight {
+  background: var(--light-color-v2);
+  border-top-color: var(--secondary-color);
+}
+
+/*--- Map ---*/
+.contact-map-section {
+  width: 80%;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.contact-map-section iframe {
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+}
+
+/*--- Contact Form ---*/
+.contact-form-section {
+  width: 80%;
+  margin: 0 auto 80px;
+}
+
+.contact-form-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form-heading h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xl);
+  color: var(--primary-color-v2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid var(--light-color-v2);
+  border-radius: var(--border-radius-xs);
+  font-family: var(--body-font);
+  font-size: var(--font-size-s);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*--- Partners Strip ---*/
+.contact-partners-section {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contact-partners-label {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  text-transform: uppercase;
+  /*  letter-spacing: 1px; */
+  margin-bottom: 12px;
+}
+
+.contact-partners-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  font-weight: var(--font-weight-medium);
+}
+
+.contact-partners-row a {
+  color: var(--dark-color);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.contact-partners-row a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+/*--- FAQ ---*/
+.contact-faq-section {
+  width: 80%;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.contact-faq-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 30px;
+}
+
+.contact-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.contact-faq-item {
+  border: 1px solid var(--light-color-v2);
+  border-radius: var(--border-radius-xs);
+  padding: 16px 20px;
+}
+
+.contact-faq-item summary {
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-n);
+  color: var(--primary-color-v2);
+  list-style: none;
+}
+
+.contact-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.contact-faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--primary-color);
+}
+
+.contact-faq-item[open] summary::after {
+  content: "-";
+}
+
+.contact-faq-item p {
+  margin-top: 12px;
+  color: var(--dark-color);
+  line-height: 1.7;
+  font-size: var(--font-size-s);
+}
+
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
