@@ -284,3 +284,23 @@ filterTags.forEach((tag) => {
     });
   });
 });
+
+const blogCards = document.querySelectorAll(".blog-card");
+
+if (blogCards.length) {
+  filterTags.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      const filter = tag.getAttribute("data-filter");
+
+      blogCards.forEach((card) => {
+        const categories = card.getAttribute("data-category");
+
+        if (filter === "all" || categories.includes(filter)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+}

@@ -413,6 +413,10 @@ nav .fa {
   text-align: center;
 }
 
+.our-services h1 {
+  font-size: var(--font-size-hero);
+}
+
 .row-our-services {
   display: flex;
   justify-content: space-between;
@@ -583,10 +587,11 @@ nav .fa {
   line-height: 1.7;
 }
 
-/*-------- Our Success Section ----*/
+/* #region -------- Our Success Section ----*/
 .success-section h1 {
   text-align: center;
   padding-top: 25px;
+  font-size: var(--font-size-hero);
 }
 .success-section p {
   text-align: center;
@@ -627,13 +632,19 @@ nav .fa {
   margin: auto;
 }
 
-/*-------- Our Partners Section ----*/
+/* #endregion */
+
+/* #region-------- Our Partners Section ----*/
 .partners-section {
   width: 80%;
   margin: auto;
   text-align: center;
   /* background: linear-gradient(135deg, var(--primary-color)
     , var(--secondary-color-v1)); */
+}
+
+.partners-section h1 {
+  font-size: var(--font-size-hero);
 }
 
 .row-partners {
@@ -717,12 +728,18 @@ nav .fa {
   animation-play-state: paused;
 }
 
-/*-------- Our Impact Section  --------*/
+/* #endregion */
+
+/* #region-------- Our Impact Section  --------*/
 .impact-section {
   width: 80%;
   margin: auto;
   text-align: center;
   padding: 60px 0 0;
+}
+
+.impact-section h1 {
+  font-size: var(--font-size-hero);
 }
 
 .row-impact {
@@ -765,12 +782,19 @@ nav .fa {
   color: var(--white-color);
 }
 
-/*-------- Our Team Section  --------*/
+/* #endregion */
+
+/* #region-------- Our Team Section  --------*/
+
 .team-section {
   width: 80%;
   margin: auto;
   text-align: center;
   padding: 40px 0 0;
+}
+
+.team-section h1 {
+  font-size: var(--font-size-hero);
 }
 
 .team-into,
@@ -970,7 +994,8 @@ nav .fa {
   color: var(--dark-color);
 }
 
-/*-------- CTA Section  --------*/
+/* #endregion */
+/* #region-------- CTA Section  --------*/
 .cta-section {
   width: 80%;
   margin: 100px auto;
@@ -1019,7 +1044,9 @@ nav .fa {
   background: #24541b;
 }
 
-/*-------- Footer Section  --------*/
+/* #endregion */
+
+/* #region-------- Footer Section  --------*/
 .footer {
   width: 100%;
   background: var(--tertiary-color);
@@ -1155,7 +1182,9 @@ nav .fa {
   height: 75vh;
 }
 
-/*-------- Our Programmes --------*/
+/* #endregion */
+
+/* #region-------- Our Programmes --------*/
 .programmes-page .programmes-banner {
   position: relative;
   overflow: hidden;
@@ -1384,7 +1413,9 @@ nav .fa {
   font-size: var(--font-size-s);
 }
 
-/*-------- About Us --------*/
+/* #endregion */
+
+/* #region -------- About Us --------*/
 .programmes-page .about-banner {
   position: relative;
   overflow: hidden;
@@ -1608,7 +1639,9 @@ nav .fa {
   transform: translateY(0);
 }
 
-/*---- Contact Trust Strip ----*/
+/* #endregion */
+
+/* #region ---- Contact Trust Strip ----*/
 .programmes-page .contact-banner {
   background-image:
     linear-gradient(
@@ -1839,6 +1872,197 @@ nav .fa {
   font-size: var(--font-size-s);
 }
 
+/* #endregion */
+
+/*-------- Blog Page --------*/
+.programmes-page .blog-banner {
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--image-hover-color),
+      var(--footer-hover-color)
+    ),
+    url(images/Life-Skills-session.jpeg);
+  background-position: center 40%;
+}
+.blog-grid {
+  width: 80%;
+  margin: 40px auto 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.blog-card {
+  background: var(--white-color);
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+  display: flex;
+  flex-direction: column;
+  transition:
+    tranform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px var(--box-shadow-color);
+}
+
+.blog-card-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.blog-card-category {
+  background: var(--light-color-v1);
+  color: var(--primary-color-v2);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-semibold);
+  padding: 4px 14px;
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--dark-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-card-date {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+}
+
+.blog-card-title {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-card-title a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.blog-card-title a:hover {
+  color: var(--primary-color);
+}
+
+.blog-card-excerpt {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.blog-card .read-more-btn {
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+/*-- Blog Article Page --*/
+.blog-article-section {
+  width: 70%;
+  margin: 0 auto 60px;
+}
+
+.blog-article-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.blog-article-section h1 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  outline-color: var(--primary-color-v2);
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.blog-article-hero-image {
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 35px;
+}
+
+.blog-article-body p {
+  color: var(--dark-color);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.blog-article-body strong {
+  color: var(--primary-color-v2);
+}
+
+.blog-article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--light-color-v2);
+}
+
+.blog-tag {
+  background: var(--light-color-v1);
+  color: var(--primary-color-v2);
+  font-size: var(--font-size-s);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-s);
+}
+
+.blog-back-link {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: var(--font-size-s);
+}
+
+.blog-back-link:hover {
+  color: var(--primary-color);
+}
+
+.blog-contact-callout {
+  background: var(--light-color-v1);
+  border-left: 4px solid var(--primary-color-v1);
+  border-radius: var(--border-radius-xs);
+  padding: 24px 26px;
+  margin: 30px 0;
+}
+
+.blog-contact-callout h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+}
+
+.blog-contact-callout p {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
@@ -2067,6 +2291,7 @@ nav .fa {
     width: fit-content;
     margin: 0 auto 10px;
   }
+
   /*-------- Our Impact --------*/
   .impact-section {
     width: 90%;
@@ -2119,6 +2344,7 @@ nav .fa {
     flex-direction: column;
     /* align-items: center; */
   }
+
   /*----- About Page -----*/
   .about-intro-section {
     text-align: left;
@@ -2139,6 +2365,22 @@ nav .fa {
 
   .core-values-grid {
     grid-template-columns: 1fr;
+  }
+
+  /*--- Blog Page ---*/
+  .blog-grid {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .blog-article-section {
+    width: 90%;
+  }
+
+  .blog-article-section h1 {
+    font-size: var(--font-size-l);
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 

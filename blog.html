@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashimoni School Of Hope</title>
+
+    <!-------------Linking CSS Styles ----------->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!------------Linking Google Fonts  ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------- Linking Font Awesome Styles ------------>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!---------- Linking Website Icon ------------>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png"
+      alt="YouthRiseChangeMakers Favicon Icon"
+    />
+  </head>
+
+  <body class="programmes-page">
+    <main>
+      <section class="header">
+        <section class="programmes-banner about-banner blog-banner">
+          <nav>
+            <a href="index.html"
+              ><img
+                src="images/YouthRiseChangemakers-Logo-v2.png"
+                alt="YouthRiseChange Makers Logo Icon"
+                class="logo-icon"
+            /></a>
+
+            <div class="nav-links" id="navLinks">
+              <i
+                class="fa fa-times"
+                aria-hidden="true"
+                onclick="hideMenu()"
+              ></i>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-programmes.html">Programmes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="#">Partner</a></li>
+                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-donate-btn">Donate</a>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+          </nav>
+
+          <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+
+          <div class="banner-content">
+            <p class="breadcrumb"><a href="index.html">Home</a> / Blog</p>
+            <h1>Our Blog</h1>
+            <p>
+              Real stories from Mathare — the wins, the challenges, and the
+              young people redefining what's possible.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!------- FILTER TAGS ------->
+      <section class="programme-filters-section">
+        <p class="programmes-intro fade-up">
+          Every story here starts the same way — a child in Mathare given a
+          chance. Filter by category to find the ones that matter most to you.
+        </p>
+
+        <div class="programme-filters">
+          <button class="filter-tags active" data-filter="all">ALL</button>
+          <button class="filter-tags" data-filter="chess">Chess</button>
+          <button class="filter-tags" data-filter="debate">Debate</button>
+          <button class="filter-tags" data-filter="community-news">
+            Community News
+          </button>
+          <button class="filter-tags" data-filter="success-stories">
+            Success Stories
+          </button>
+        </div>
+      </section>
+
+      <!------- BLOG GRID ------->
+      <section class="blog-grid">
+        <!--- ARTICLE 1 --->
+        <article
+          class="blog-card fade-up"
+          data-category="debate success-stories"
+        >
+          <a
+            href="blog-debate-mathare-podium.html"
+            class="blog-card-image-link"
+          >
+            <img
+              src="images/debate-competitons-last.jpg"
+              alt="Mashimoni SOH senior debate team"
+              class="blog-card-image"
+            />
+          </a>
+
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-category">Debate</span>
+              <span class="blog-card-date">April 13, 2026</span>
+            </div>
+
+            <h3 class="blog-card-title">
+              <a href="blog-debate-mathare-podium.html"
+                >From Mathare To The Podium: YouthRiseChangeMakers Redefine
+                What's Possible</a
+              >
+            </h3>
+
+            <p class="blog-card-excerpt">
+              Out of 24 Schools of Hope across Mathare, our senior debate team
+              was crowned Best Debating Team 2026 — with all four seniors
+              ranking in the cluster's Top 5 orators.
+            </p>
+
+            <a href="blog-debate-mathare-podium.html" class="read-more-btn"
+              >Read Story
+            </a>
+          </div>
+        </article>
+
+        <!--- ARTICLE 2 --->
+        <article class="blog-card fade-up" data-category="chess">
+          <a
+            href="blog-boardlords-chess-fundraiser.html"
+            class="blog-card-image-link"
+          >
+            <img
+              src="images/board-lords-chess-club-team.jpg"
+              alt="Mashimoni SOH senior debate team"
+              class="blog-card-image"
+            />
+          </a>
+
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-category">Chess</span>
+              <span class="blog-card-date">May 12, 2026</span>
+            </div>
+
+            <h3 class="blog-card-title">
+              <a href="blog-boardlords-chess-fundraiser.html"
+                >The Unlikely Birth Of Boardlords Chess Club: A Story Of Passion
+                And Potential</a
+              >
+            </h3>
+
+            <p class="blog-card-excerpt">
+              From three learners to 34 dedicated players, Boardlords Chess Club
+              is proving chess isn't just for the privileged. Now we're raising
+              support to send our top players to nationals.
+            </p>
+
+            <a
+              href="blog-boardlords-chess-fundraiser.html"
+              class="read-more-btn"
+              >Read Story
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!---------Footer Section------->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChangeMakers Logo"
+              class="footer-logo"
+            />
+            <p>
+              YouthRiseChangeMakers exists because every young person in Mathare
+              deserves more than survival — they deserve a real shot at rising,
+              learning, and leading
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h2>Our Programs & Activities</h2>
+            <ul>
+              <li><a href="#">Evening Library & Learning Hub</a></li>
+              <li><a href="#">Group Discussions</a></li>
+              <li><a href="#">E-Learning Sessions</a></li>
+              <li><a href="#">Chess Training & Competitions</a></li>
+              <li><a href="#">Debate Competitions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <!--  <h2>Contact Us</h2>
+        <ul class="contact-list">
+          <li><i class="fa fa-phone"></i> 0771 671502</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
+          <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
+        </ul> -->
+
+            <h2>Newsletter</h2>
+            <p>Sign up now to get daily latest news & updates from us</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button class="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> YouthRiseChangeMakers |
+            Mashimoni School Of Hope. All rights reserved.
+          </p>
+        </div>
+      </section>
+
+      <!---------Linking Script File------->
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
