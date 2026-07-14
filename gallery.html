@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashimoni School Of Hope</title>
+
+    <!-------------Linking CSS Styles ----------->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!------------Linking Google Fonts  ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------- Linking Font Awesome Styles ------------>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!---------- Linking Website Icon ------------>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png"
+      alt="YouthRiseChangeMakers Favicon Icon"
+    />
+  </head>
+
+  <body class="programmes-page">
+    <main>
+      <section class="header">
+        <section class="programmes-banner about-banner gallery-banner">
+          <nav>
+            <a href="index.html"
+              ><img
+                src="images/YouthRiseChangemakers-Logo-v2.png"
+                alt="YouthRiseChange Makers Logo Icon"
+                class="logo-icon"
+            /></a>
+
+            <div class="nav-links" id="navLinks">
+              <i
+                class="fa fa-times"
+                aria-hidden="true"
+                onclick="hideMenu()"
+              ></i>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-programmes.html">Programmes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="#">Partner</a></li>
+                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-donate-btn">Donate</a>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+          </nav>
+
+          <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+
+          <div class="banner-content">
+            <p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+            <h1>Our Gallery</h1>
+            <p>
+              Moments from the library, the chessboard, and the debate floor — a
+              look at everyday life at Mashimoni School of Hope.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!------- FILTER TAGS ------->
+      <section class="programme-filters-section">
+        <p class="programmes-intro fade-up">
+          Every photo tells a piece of the story. Filter by category to see the
+          moments that matter most to you.
+        </p>
+
+        <div class="programme-filters">
+          <button class="filter-tags active" data-filter="all">ALL</button>
+          <button class="filter-tags" data-filter="chess">Chess</button>
+          <button class="filter-tags" data-filter="debate">Debate</button>
+          <button class="filter-tags" data-filter="library">Library</button>
+          <button class="filter-tags" data-filter="girls-club">
+            Girls' Club
+          </button>
+          <button class="filter-tags" data-filter="community">Community</button>
+        </div>
+      </section>
+
+      <!------- GALLERY GRID ------->
+      <section class="gallery-grid">
+        <div
+          class="gallery-item fade-up"
+          data-category="chess"
+          data-src="images/board-lords-chess-club-team.jpg"
+          data-caption="Boardlords Chess Club — Team Together"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/board-lords-chess-club-team.jpg"
+            alt="Boardlords Chess Club team"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="debate"
+          data-src="images/debate-competitons-last.jpg"
+          data-caption="Senior debate team — Best Debating Team 2026"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/debate-competitons-last.jpg"
+            alt="Mashimoni SOH senior debate team"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/students-holding-books.jpeg"
+          data-caption="Learners at the Evening Library & Learning Hub"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/students-holding-books.jpeg"
+            alt="Students holding books at Mashimoni Library"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="girls-club"
+          data-src="images/girls-club-sessions.jpeg"
+          data-caption="Girls' Club Session"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/girls-club-sessions.jpeg"
+            alt="Girls' Club session at Mashimoni Library"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="chess"
+          data-src="images/chess-competion.jpg"
+          data-caption="Chess Training & Competitions"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/chess-competion.jpg"
+            alt="Chess Training & Competitions"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="community"
+          data-src="images/mashimoni-campus-together.jpg"
+          data-caption="The Mashimoni community, together"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/mashimoni-campus-together.jpg"
+            alt="The Mashimoni community, together"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/Students-Discussing-in-library.jpeg"
+          data-caption="Group discussion at the library"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/Students-Discussing-in-library.jpeg"
+            alt="Students discussing in the library"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="debate"
+          data-src="images/debate-competitons.jpeg"
+          data-caption="Debate Competitions"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/debate-competitons.jpeg" alt="Debate competition" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="community"
+          data-src="images/group-discussions.jpeg"
+          data-caption="Group Discussions"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/group-discussions.jpeg" alt="Group discussion" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/safe-learning-spaces.jpeg"
+          data-caption="A safe learning space"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/safe-learning-spaces.jpeg"
+            alt="Safe learning space at Mashimoni Library"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="girls-club"
+          data-src="images/Life-Skills-session.jpeg"
+          data-caption="Life Skills session"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/Life-Skills-session.jpeg"
+            alt="Life skills session"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="community"
+          data-src="images/E-learning-sessions.jpeg"
+          data-caption="E-Learning Sessions"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/E-learning-sessions.jpeg" alt="E-learning session" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/student-reading.jpeg"
+          data-caption="A student reading in the library"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/student-reading.jpeg" alt="Student reading" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="chess"
+          data-src="images/Deno-chess.jpeg"
+          data-caption="Boardlords Chess Club training"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/Deno-chess.jpeg" alt="Chess training" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/students-certificates.jpeg"
+          data-caption="Learners with their certificates"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/students-certificates.jpeg"
+            alt="Students holding certificates"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="library"
+          data-src="images/students-studying-ksce.jpeg"
+          data-caption="Students preparing for KCSE"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/students-studying-ksce.jpeg"
+            alt="Students studying"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="community"
+          data-src="images/Zoom-sessions.jpeg"
+          data-caption="A Zoom e-learning session in progress"
+          onclick="openPhotoModal(this)"
+        >
+          <img src="images/Zoom-sessions.jpeg" alt="Zoom e-learning session" />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+
+        <div
+          class="gallery-item fade-up"
+          data-category="girls-club"
+          data-src="images/girls-club-session-v2.jpeg"
+          data-caption="Girls' Club Session"
+          onclick="openPhotoModal(this)"
+        >
+          <img
+            src="images/girls-club-session-v2.jpeg"
+            alt="Girls' Club session"
+          />
+          <span class="gallery-item-overlay"
+            ><i class="fa fa-search-plus" aria-hidden="true"></i
+          ></span>
+        </div>
+      </section>
+
+      <!---------PHOTO LIGHTBOX MODAL------->
+      <div
+        class="photo-modal-overlay"
+        id="photoModalOverlay"
+        onclick="closePhotoModal(event)"
+      >
+        <div class="photo-modal">
+          <i
+            class="fa fa-times photo-modal-close"
+            aria-hidden="true"
+            onclick="closePhotoModal(event)"
+          >
+          </i>
+          <img src="" alt="" id="photoModalImage" />
+          <p class="photo-modal-caption" id="photoModalCaption"></p>
+        </div>
+      </div>
+      <!---------Footer Section------->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChangeMakers Logo"
+              class="footer-logo"
+            />
+            <p>
+              YouthRiseChangeMakers exists because every young person in Mathare
+              deserves more than survival — they deserve a real shot at rising,
+              learning, and leading
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h2>Our Programs & Activities</h2>
+            <ul>
+              <li><a href="#">Evening Library & Learning Hub</a></li>
+              <li><a href="#">Group Discussions</a></li>
+              <li><a href="#">E-Learning Sessions</a></li>
+              <li><a href="#">Chess Training & Competitions</a></li>
+              <li><a href="#">Debate Competitions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <!--  <h2>Contact Us</h2>
+        <ul class="contact-list">
+          <li><i class="fa fa-phone"></i> 0771 671502</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
+          <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
+        </ul> -->
+
+            <h2>Newsletter</h2>
+            <p>Sign up now to get daily latest news & updates from us</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button class="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> YouthRiseChangeMakers |
+            Mashimoni School Of Hope. All rights reserved.
+          </p>
+        </div>
+      </section>
+
+      <!---------Linking Script File------->
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

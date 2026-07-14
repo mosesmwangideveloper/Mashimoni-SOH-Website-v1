@@ -304,3 +304,48 @@ if (blogCards.length) {
     });
   });
 }
+
+// Photo lightbox
+const photoModalOverlay = document.getElementById("photoModalOverlay");
+
+function openPhotoModal(el) {
+  document.getElementById("photoModalImage").src = el.getAttribute("data-src");
+  document.getElementById("photoModalImage").alt =
+    el.getAttribute("data-caption");
+  document.getElementById("photoModalCaption").textContent =
+    el.getAttribute("data-caption");
+
+  photoModalOverlay.classList.add("active");
+}
+
+function closePhotoModal(event) {
+  if (
+    !event ||
+    event.target === photoModalOverlay ||
+    event.target.classList.contains("photo-modal-close")
+  ) {
+    photoModalOverlay.classList.remove("active");
+  }
+}
+
+// Gallery filter tags
+/* const filterTags = document.querySelectorAll(".filter-tags"); */
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+if (galleryItems.length) {
+  filterTags.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      const filter = tag.getAttribute("data-filter");
+
+      galleryItems.forEach((item) => {
+        const category = item.getAttribute("data-category");
+
+        if (filter === "all" || category === filter) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+}

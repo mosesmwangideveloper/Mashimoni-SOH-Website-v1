@@ -405,7 +405,7 @@ nav .fa {
   animation: slideInUp 3s ease-out;
 }
 
-/*-------- Our Services Section ----*/
+/* #region -------- Our Services Section ----*/
 .our-services {
   width: 80%;
   margin: auto;
@@ -488,17 +488,6 @@ nav .fa {
   transition-delay: 0.8s;
 }
 
-/* Delay each partner card  */
-/* .partner-col:nth-child(1) {
-  transition-delay: 0s;
-}
-.partner-col:nth-child(2) {
-  transition-delay: 0.4s;
-}
-.partner-col:nth-child(3) {
-  transition-delay: 0.8s;
-} */
-
 /* Delay each impact card */
 .impact-col:nth-child(1) {
   background-image:
@@ -548,44 +537,7 @@ nav .fa {
   transition-delay: 0.8s;
 }
 
-/*-------- Our History Section ----*/
-.history-section {
-  width: 100%;
-  padding: 30px 0 50px;
-  min-height: unset;
-  /*  background: linear-gradient(rgba(54, 54, 54, 0.8), rgba(54, 54, 54, 0.8))/* , url(images/mashimoni-campus-together.jpg); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.history-col {
-  flex-basis: 48%;
-  padding: 20px 2px;
-  width: 80%;
-  margin: auto;
-}
-
-.history-title {
-  padding-top: 0;
-  margin-bottom: 5px;
-  font-size: var(--font-size-l);
-}
-
-.history-sub-title {
-  font-size: 18px;
-  font-weight: var(--font-weight-medium);
-  margin-bottom: 5px;
-}
-
-.history-description {
-  text-align: left;
-  margin: auto;
-  font-weight: var(--font-weight-normal);
-  padding: 15px 0 25px;
-  margin: auto;
-  line-height: 1.7;
-}
+/* #endregion */
 
 /* #region -------- Our Success Section ----*/
 .success-section h1 {
@@ -1874,7 +1826,7 @@ nav .fa {
 
 /* #endregion */
 
-/*-------- Blog Page --------*/
+/* #region -------- Blog Page --------*/
 .programmes-page .blog-banner {
   background-image:
     linear-gradient(
@@ -2063,6 +2015,107 @@ nav .fa {
   color: var(--dark-color);
 }
 
+/* #endregion */
+
+/*-------- Gallery Page --------*/
+.gallery-grid {
+  width: 85%;
+  margin: 20px auto 80px;
+  columns: 3 300px;
+  column-gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 24px;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--box-shadow-color);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--image-hover-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.photo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--box-shadow-color);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.photo-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.photo-modal {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+}
+
+.photo-modal img {
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+  display: block;
+  max-height: 75vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.photo-modal-caption {
+  color: var(--white-color);
+  text-align: center;
+  margin-top: 14px;
+  font-size: var(--font-size-s);
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  font-size: var(--font-size-xl);
+  color: var(--white-color);
+  cursor: pointer;
+}
 /*-------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
@@ -2382,6 +2435,12 @@ nav .fa {
     overflow-wrap: break-word;
     word-break: break-word;
   }
+
+  /*-------- Gallery Page --------*/
+  .gallery-grid {
+    columns: 1;
+    width: 90%;
+  }
 }
 
 /*-------- Tablet Styling --------*/
@@ -2593,5 +2652,10 @@ nav .fa {
   /*-------- About Us --------*/
   .core-values-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*-------- Gallery Page --------*/
+  .gallery-grid {
+    columns: 2;
   }
 }
