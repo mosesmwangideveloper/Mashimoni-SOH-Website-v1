@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
+/* #region-------- Styles For Entire Screen --------*/
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +69,8 @@
 section h1 {
   font-family: var(--heading-font);
 }
+
+/* #endregion */
 
 /* #region -------- Nav Styling --------*/
 nav {
@@ -163,9 +166,9 @@ nav .fa {
   visibility: visible;
 }
 
-/*  */
+/* #endregion */
 
-/*-------- Hero Section Styling --------*/
+/* #region -------- Hero Section Styling --------*/
 /* .hero-section, */
 .success-section {
   width: 80%;
@@ -404,6 +407,8 @@ nav .fa {
 .cta-section .cta-buttons .hero-btn {
   animation: slideInUp 3s ease-out;
 }
+
+/* #endregion  */
 
 /* #region -------- Our Services Section ----*/
 .our-services {
@@ -1298,11 +1303,16 @@ nav .fa {
   margin-bottom: 10px;
 }
 
-.progamme-badges {
+.programme-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 0;
+  /* justify-content: center; */
+}
+
+.what-we-do-section .programme-badges {
+  justify-content: center;
 }
 
 .programme-badge {
@@ -2017,7 +2027,7 @@ nav .fa {
 
 /* #endregion */
 
-/*-------- Gallery Page --------*/
+/* #region-------- Gallery Page --------*/
 .gallery-grid {
   width: 85%;
   margin: 20px auto 80px;
@@ -2116,7 +2126,146 @@ nav .fa {
   color: var(--white-color);
   cursor: pointer;
 }
-/*-------- Responsive Mobile --------*/
+
+/* #endregion */
+
+/* #region-------- Partner Page --------*/
+.programmes-page .partner-banner {
+  background-image:
+    linear-gradient(
+      150deg,
+      var(--image-hover-color),
+      var(--footer-hover-color)
+    ),
+    url(images/Life-skills-session-v2.jpeg);
+  background-position: center 35%;
+}
+.partner-cards-section {
+  width: 80%;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.partner-cards-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 40px;
+}
+
+.partner-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+.partner-card {
+  background: var(--light-color-v1);
+  border-left: 3px solid var(--primary-color-v1);
+  border-radius: var(--border-radius-xs);
+  box-shadow: 1 4px 15px var(--box-shadow-color);
+  padding: 18px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card h3 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+}
+
+.partner-card p {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.partner-card .read-more-btn {
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.partner-card-logo {
+  width: 130px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+/*--- Partnering Process---*/
+.partner-process-section {
+  width: 80%;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.partner-process-section h2 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color-v2);
+  margin-bottom: 10px;
+}
+
+.process-intro {
+  color: var(--dark-color);
+  margin-bottom: 40px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.process-step {
+  background: var(--white-color);
+  border-right: var(--border-radius-xs);
+  box-shadow: 1 4px 15px var(--box-shadow-color);
+  padding: 30px 20px;
+  text-align: left;
+}
+
+.process-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-l);
+  color: var(--white-color);
+  background: var(--primary-color);
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 16px;
+}
+
+.process-step h3 {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-m);
+  color: var(--primary-color-v2);
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  color: var(--dark-color);
+  font-size: var(--font-size-s);
+  line-height: 1.6;
+}
+
+.process-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* #region -------- Responsive Mobile --------*/
 @media screen and (max-width: 700px) {
   /*---- Nav ----*/
   .nav-links {
@@ -2193,29 +2342,7 @@ nav .fa {
     display: none;
   }
 
-  /* .hero-section{
-        padding: 0 6%;
-        min-height: 80vh;
-        background-position: left;
-    }
-
-    .hero-content{
-        max-width: 100%;
-        
-    }
-
-    .hero-content .hero-title{
-        font-size: var(--font-size-l);
-    }
-
-    .hero-content .hero-sub-title{
-        font-size: var(--font-size-xxl);
-        padding-bottom: 10px;
-    } */
-
-  /* .hero-content .hero-buttons,  */
   .success-section .hero-buttons {
-    /* flex-direction: column; */
     gap: 15px;
     width: 100%;
     justify-content: left;
@@ -2441,9 +2568,23 @@ nav .fa {
     columns: 1;
     width: 90%;
   }
+
+  /*-------- Partner Page --------*/
+  .partner-cards-section {
+    width: 90%;
+  }
+  .partner-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
 }
 
-/*-------- Tablet Styling --------*/
+/*  #endregion */
+
+/*  #region-------- Tablet Styling --------*/
 @media screen and (min-width: 701px) and (max-width: 1024px) {
   /*----- Nav Styling -----*/
   .nav-links {
@@ -2503,18 +2644,6 @@ nav .fa {
   }
 
   /*-------- Hero Styling --------*/
-  /* .hero-col .hero-title{
-        font-size: var(--font-size-m);
-    }
-
-    .hero-section{
-        width: 90%;
-    }
-
-   .hero-col .description{
-    font-size: var(--font-size-s);
-    } */
-
   .hero-content .hero-title {
     font-size: var(--font-size-m);
   }
@@ -2549,10 +2678,6 @@ nav .fa {
   .desktop-only-second {
     display: none;
   }
-
-  /*  .desktop-only-third{
-        display: none;
-    } */
 
   /*-------- Our Services --------*/
   .row-our-services {
@@ -2658,4 +2783,14 @@ nav .fa {
   .gallery-grid {
     columns: 2;
   }
+  /*-------- Partner Page --------*/
+  .partner-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* #endregion */
