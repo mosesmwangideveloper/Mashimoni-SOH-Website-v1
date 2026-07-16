@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashimoni School Of Hope</title>
+
+    <!-------------Linking CSS Styles ----------->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!------------Linking Google Fonts  ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------- Linking Font Awesome Styles ------------>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!---------- Linking Website Icon ------------>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Mashimoni-Favicon-Icon-v1-removebg-preview.png"
+      alt="YouthRiseChangeMakers Favicon Icon"
+    />
+  </head>
+
+  <body class="programmes-page">
+    <main>
+      <section class="header">
+        <section class="programmes-banner about-banner">
+          <nav>
+            <a href="index.html"
+              ><img
+                src="images/YouthRiseChangemakers-Logo-v2.png"
+                alt="YouthRiseChange Makers Logo Icon"
+                class="logo-icon"
+            /></a>
+
+            <div class="nav-links" id="navLinks">
+              <i
+                class="fa fa-times"
+                aria-hidden="true"
+                onclick="hideMenu()"
+              ></i>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-programmes.html">Programmes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+              </ul>
+            </div>
+            <a href="#" class="nav-donate-btn">Donate</a>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+          </nav>
+
+          <div class="overlay" id="overlay" onclick="hideMenu()"></div>
+
+          <div class="banner-content">
+            <p class="breadcrumb"><a href="index.html">Home</a> / Donate</p>
+            <h1>Support Mashimoni School Of Hope</h1>
+            <p>
+              Every shilling goes straight into the library, chess training, and
+              the children who rely on both.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!------- IMPACT STATS ------->
+      <section class="impact-stats-section">
+        <span class="section-eyebrow fade-up"> Where It Goes </span>
+        <h2 class="fade-up">What Your Donation Does ?</h2>
+
+        <div class="impact-stats-grid">
+          <div class="impact-stat-card fade-up">
+            <i class="fa fa-book value-icon" aria-hidden="true"></i>
+            <h3>KSh 500</h3>
+            <p>Covers school supplies for one child for a week</p>
+          </div>
+
+          <div class="impact-stat-card fade-up">
+            <i class="fa fa-cutlery value-icon" aria-hidden="true"></i>
+            <h3>KSh 1,000</h3>
+            <p>Feeds a child at the library for a full week</p>
+          </div>
+
+          <div class="impact-stat-card fade-up">
+            <i class="fa fa-trophy value-icon" aria-hidden="true"></i>
+            <h3>KSh 5,000</h3>
+            <p>Helps send a Boardlords player to nationals</p>
+          </div>
+        </div>
+      </section>
+
+      <!------- DONATE FORM ------->
+      <section class="donate-form-section">
+        <div class="contact-form-heading fade-up">
+          <span class="section-eyebrow">Make A Donation</span>
+          <h2>Choose An Amount</h2>
+        </div>
+
+        <div class="donate-amount-grid fade-up">
+          <button
+            type="button"
+            class="amount-btn"
+            onclick="selectAmount(this, 500)"
+          >
+            KSh 500
+          </button>
+
+          <button
+            type="button"
+            class="amount-btn"
+            onclick="selectAmount(this, 1000)"
+          >
+            KSh 1,000
+          </button>
+
+          <button
+            type="button"
+            class="amount-btn"
+            onclick="selectAmount(this, 5000)"
+          >
+            KSh 5,000
+          </button>
+
+          <button
+            type="button"
+            class="amount-btn"
+            onclick="selectAmount(this, 0)"
+          >
+            Custom
+          </button>
+        </div>
+
+        <div
+          class="donate-custom-row fade-up"
+          id="customAmountRow"
+          style="display: none"
+        >
+          <input
+            type="number"
+            id="customAmountInput"
+            placeholder="Enter amount (KSh)"
+            min="1"
+          />
+        </div>
+
+        <p class="donate-selected-text fade-up" id="donateSelectedText"></p>
+
+        <!-- Payment method placeholder cards -->
+        <div class="payment-methods-grid fade-up">
+          <div class="payment-method-card">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <h3>M-Pesa</h3>
+            <p>Paybill: <strong>XXXXXX</strong></p>
+            <p>Account: <strong>Donate</strong></p>
+          </div>
+
+          <div class="payment-method-card">
+            <i class="fa fa-paypal" aria-hidden="true"></i>
+            <h3>Paypal</h3>
+            <p>For international donors</p>
+            <a href="#" class="read-more-btn">Donate via PayPal</a>
+          </div>
+        </div>
+      </section>
+
+      <!------- SPONSER A CHILD ------->
+      <section class="sponser-section">
+        <div class="sponser-card fade-up">
+          <div class="sponser-text">
+            <span class="section-eyebrow">Give Monthly</span>
+            <h2>Sponsor A Child</h2>
+            <p>
+              Become a monthly sponsor and give one child consistent support —
+              school supplies, meals at the library, and mentorship all year
+              round. Become a monthly sponsor and give one child consistent
+              support — school supplies, meals at the library, and mentorship
+              all year round.
+            </p>
+            <a href="https://wa.me/254795063917" class="hero-btn cta-btn"
+              >Become A Sponsor</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!------- Testimonial Section ------->
+      <!-- <section class="testimonial-section">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <p class="testimonial-quote fade-up">
+          I didn't just learn to read in this library — I learned to think
+          ahead, on the chessboard and in life. Now I get to open that same door
+          for the next child.
+        </p>
+        <img
+          src="images/david-oduor.jpg"
+          alt="David Oduor"
+          class="testimonial-photo"
+        />
+
+        <p class="testimonial-author fade-up">
+          David Oduor — Founder & Programs Lead, once a student at Mashimoni
+          School of Hope
+        </p>
+      </section> -->
+
+      <!---------Footer Section------->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <img
+              src="images/YouthRiseChangemakers-Logo.png"
+              alt="YouthRiseChangeMakers Logo"
+              class="footer-logo"
+            />
+            <p>
+              YouthRiseChangeMakers exists because every young person in Mathare
+              deserves more than survival — they deserve a real shot at rising,
+              learning, and leading
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Programs</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h2>Our Programs & Activities</h2>
+            <ul>
+              <li><a href="#">Evening Library & Learning Hub</a></li>
+              <li><a href="#">Group Discussions</a></li>
+              <li><a href="#">E-Learning Sessions</a></li>
+              <li><a href="#">Chess Training & Competitions</a></li>
+              <li><a href="#">Debate Competitions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <!--  <h2>Contact Us</h2>
+        <ul class="contact-list">
+          <li><i class="fa fa-phone"></i> 0771 671502</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> mashimonieastafrica@gmail.com</li>
+          <li><i class="fa fa-map-marker"></i> Nairobi, Kenya</li>
+        </ul> -->
+
+            <h2>Newsletter</h2>
+            <p>Sign up now to get daily latest news & updates from us</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button class="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> YouthRiseChangeMakers |
+            Mashimoni School Of Hope. All rights reserved.
+          </p>
+        </div>
+      </section>
+
+      <!---------Blank Section------->
+      <!--   <section class="blank-section">
+  </section> -->
+
+      <!---------Linking Script File------->
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

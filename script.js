@@ -349,3 +349,45 @@ if (galleryItems.length) {
     });
   });
 }
+
+// Handles the KSh 500 / 1000 / 5000 / Custom buttons on the donate page
+function selectAmount(button, amount) {
+  document.querySelectorAll(".amount-btn").forEach(function (btn) {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  const customRow = document.getElementById("customAmountRow");
+  const selectedText = document.getElementById("donateSelectedText");
+
+  if (amount === 0) {
+    customRow.style.display = "block";
+    selectedText.textContent = "";
+    document.getElementById("customAmountInput").focus();
+  } else {
+    customRow.style.display = "none";
+    selectedText.textContent =
+      "You've selected KSh " +
+      amount.toLocaleString() +
+      " — send it using M-Pesa or PayPal below.";
+  }
+}
+
+// Updates the message live as someone types a custom amount
+document.addEventListener("DOMContentLoaded", function () {
+  const customInput = document.getElementById("customAmountInput");
+
+  if (customInput) {
+    customInput.addEventListener("input", function () {
+      const selectedText = document.getElementById("donateSelectedText");
+      const val = customInput.value;
+
+      selectedText.textContent = val
+        ? "You've selected KSh " +
+          Number(val).toLocaleString() +
+          " — send it using M-Pesa or PayPal below."
+        : "";
+    });
+  }
+});
