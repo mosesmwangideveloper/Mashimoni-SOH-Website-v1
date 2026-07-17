@@ -1,3 +1,12 @@
+const currencyConfig = {
+  KES: { symbol: "KSh", amounts: [500, 1000, 5000] },
+  USD: { symbol: "$", amounts: [5, 10, 40] },
+  EUR: { symbol: "€", amounts: [5, 10, 35] },
+};
+
+let activeCurrency = "KES";
+let activeTier = null;
+
 // Toggle the navigation menu
 var navLinks = document.getElementById("navLinks");
 var overlay = document.getElementById("overlay");
@@ -21,9 +30,9 @@ function showNextSlide() {
   currentSlide = (currentSlide + 1) % heroSlides.length;
   heroSlides[currentSlide].classList.add("active");
 }
-
-setInterval(showNextSlide, 5000);
-
+if (heroSlides.length) {
+  setInterval(showNextSlide, 5000);
+}
 // Scroll-down arrow - jump to next section smoothly
 const scrollArrow = document.querySelector(".scroll-down-arrow");
 
@@ -59,7 +68,6 @@ const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
 // Team member bio data
-
 const teamdata = {
   david: {
     name: "David Oduor",
@@ -351,26 +359,85 @@ if (galleryItems.length) {
 }
 
 // Handles the KSh 500 / 1000 / 5000 / Custom buttons on the donate page
-function selectAmount(button, amount) {
-  document.querySelectorAll(".amount-btn").forEach(function (btn) {
+function selectAmount(button) {
+  document.querySelectorAll(".amount-btn[data-tier]").forEach(function (btn) {
     btn.classList.remove("active");
   });
 
   button.classList.add("active");
 
   const customRow = document.getElementById("customAmountRow");
-  const selectedText = document.getElementById("donateSelectedText");
+  const tier = button.dataset.tier;
 
-  if (amount === 0) {
+  if (tier === "custom") {
+    activeTier = null;
     customRow.style.display = "block";
-    selectedText.textContent = "";
+    document.getElementById("donateSelectedText").textContent = "";
     document.getElementById("customAmountInput").focus();
   } else {
+    activeTier = Number(tier);
     customRow.style.display = "none";
-    selectedText.textContent =
-      "You've selected KSh " +
-      amount.toLocaleString() +
-      " — send it using M-Pesa or PayPal below.";
+    const amount = currencyConfig[activeCurrency].amounts[activeTier - 1];
+    updateSelectedText(amount);
+  }
+}
+
+// Shard by preset buttons AND the custom input so the msg looks the same
+function updateSelectedText(amount) {
+  const symbol = currencyConfig[activeCurrency].symbol;
+  document.getElementById("donateSelectedText").textContent =
+    "You've selected " +
+    symbol +
+    " " +
+    amount.toLocaleString() +
+    " — send it using M-Pesa or PayPal below.";
+}
+
+// Handles clicking Ksh / USD / EUR
+function switchCurrency(button, currency) {
+  activeCurrency = currency;
+
+  document
+    .querySelectorAll(".amount-btn[data-currency]")
+    .forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+  button.classList.add("active");
+
+  const cfg = currencyConfig[currency];
+
+  // Update the 3 "What Your Donation Does" cards (KSh 500 → $5 → €5 etc.)
+  document
+    .querySelectorAll(".impact-stat-card h3")
+    .forEach(function (heading, index) {
+      heading.textContent =
+        cfg.symbol + " " + cfg.amounts[index].toLocaleString();
+    });
+
+  // Update the 3 preset amount buttons
+  document.querySelectorAll(".amount-btn[data-tier]").forEach(function (btn) {
+    const tier = btn.dataset.tier;
+    if (tier !== "custom") {
+      btn.textContent =
+        cfg.symbol + " " + cfg.amounts[Number(tier) - 1].toLocaleString();
+    }
+  });
+
+  // Update the custom input's placeholder
+  const customInput = document.getElementById("customAmountInput");
+  if (customInput) {
+    customInput.placeholder = "Enter amount (" + cfg.symbol + ")";
+  }
+
+  // If a preset was already selected, refresh the confirmation text in the new currency
+  if (activeTier) {
+    updateSelectedText(cfg.amounts[activeTier - 1]);
+  } else {
+    const customInput = document.getElementById("customAmountInput");
+    if (customInput) {
+      customInput.value = "";
+    }
+    document.getElementById("donateSelectedText").textContent = "";
   }
 }
 
@@ -380,14 +447,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (customInput) {
     customInput.addEventListener("input", function () {
-      const selectedText = document.getElementById("donateSelectedText");
       const val = customInput.value;
-
-      selectedText.textContent = val
-        ? "You've selected KSh " +
-          Number(val).toLocaleString() +
-          " — send it using M-Pesa or PayPal below."
-        : "";
+      if (val) {
+        updateSelectedText(Number(val));
+      } else {
+        document.getElementById("donateSelectedText").textContent = "";
+      }
     });
   }
 });

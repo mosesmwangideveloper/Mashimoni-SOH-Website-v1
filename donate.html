@@ -57,10 +57,12 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="partner.html">Partner</a></li>
-                <li class="nav-mobile-donate"><a href="#">Donate</a></li>
+                <li class="nav-mobile-donate">
+                  <a href="donate.html">Donate</a>
+                </li>
               </ul>
             </div>
-            <a href="#" class="nav-donate-btn">Donate</a>
+            <a href="donate.html" class="nav-donate-btn">Donate</a>
             <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
           </nav>
 
@@ -81,6 +83,32 @@
       <section class="impact-stats-section">
         <span class="section-eyebrow fade-up"> Where It Goes </span>
         <h2 class="fade-up">What Your Donation Does ?</h2>
+        <div class="donate-amount-grid fade-up">
+          <button
+            type="button"
+            class="amount-btn active"
+            data-currency="KES"
+            onclick="switchCurrency(this, 'KES')"
+          >
+            KSh
+          </button>
+          <button
+            type="button"
+            class="amount-btn"
+            data-currency="USD"
+            onclick="switchCurrency(this, 'USD')"
+          >
+            USD ($)
+          </button>
+          <button
+            type="button"
+            class="amount-btn"
+            data-currency="EUR"
+            onclick="switchCurrency(this, 'EUR')"
+          >
+            EUR (€)
+          </button>
+        </div>
 
         <div class="impact-stats-grid">
           <div class="impact-stat-card fade-up">
@@ -110,35 +138,37 @@
           <h2>Choose An Amount</h2>
         </div>
 
+        <!------- CURRENCY TOGGLE ------->
         <div class="donate-amount-grid fade-up">
           <button
             type="button"
             class="amount-btn"
-            onclick="selectAmount(this, 500)"
+            data-tier="1"
+            onclick="selectAmount(this)"
           >
             KSh 500
           </button>
-
           <button
             type="button"
             class="amount-btn"
-            onclick="selectAmount(this, 1000)"
+            data-tier="2"
+            onclick="selectAmount(this)"
           >
             KSh 1,000
           </button>
-
           <button
             type="button"
             class="amount-btn"
-            onclick="selectAmount(this, 5000)"
+            data-tier="3"
+            onclick="selectAmount(this)"
           >
             KSh 5,000
           </button>
-
           <button
             type="button"
             class="amount-btn"
-            onclick="selectAmount(this, 0)"
+            data-tier="custom"
+            onclick="selectAmount(this)"
           >
             Custom
           </button>

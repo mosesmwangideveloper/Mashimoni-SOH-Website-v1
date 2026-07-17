@@ -2490,6 +2490,10 @@ nav .fa {
     background-position: center;
   }
 
+  .hero-content .hero-sub-title {
+    font-size: 38px;
+  }
+
   .desktop-only-first {
     display: none;
   }
@@ -2510,11 +2514,16 @@ nav .fa {
     flex-wrap: nowrap;
   }
 
-  .hero-content .hero-btn,
-  .success-section .hero-btn {
+  .hero-content .hero-btn {
     width: auto;
     text-align: center;
     padding: 12px 30px;
+  }
+
+  .success-section .hero-btn {
+    width: auto;
+    text-align: center;
+    padding: 12px 20px;
   }
 
   /*----- Mobile Animation -----*/
@@ -2533,12 +2542,19 @@ nav .fa {
     padding-top: 10px;
   }
 
+  .our-services h1 {
+    font-size: var(--font-size-xxl);
+  }
+
   .row-our-services {
     flex-direction: column;
     gap: 20px;
   }
 
   /*-------- Our Success --------*/
+  .success-section h1 {
+    font-size: var(--font-size-xxl);
+  }
   .row-success {
     flex-direction: column;
     gap: 20px;
@@ -2567,6 +2583,10 @@ nav .fa {
   }
 
   /*-------- Our Partners --------*/
+  .partners-section h1 {
+    font-size: var(--font-size-xxl);
+  }
+
   .row-partners {
     flex-direction: row;
     gap: 20px;
@@ -2618,6 +2638,10 @@ nav .fa {
   /*-------- Our Team --------*/
   .team-section {
     width: 90%;
+  }
+
+  .team-section h1 {
+    font-size: var(--font-size-xxl);
   }
 
   .team-col,
