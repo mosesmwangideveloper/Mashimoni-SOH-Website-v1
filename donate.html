@@ -80,13 +80,22 @@
       </section>
 
       <!------- IMPACT STATS ------->
-      <section class="impact-stats-section">
+      <!--   <section class="impact-stats-section">
         <span class="section-eyebrow fade-up"> Where It Goes </span>
         <h2 class="fade-up">What Your Donation Does ?</h2>
+      </section> -->
+
+      <!------- DONATE FORM ------->
+      <section class="donate-form-section">
+        <div class="contact-form-heading fade-up">
+          <span class="section-eyebrow">Make A Donation</span>
+          <h2>Choose An Amount</h2>
+        </div>
+
         <div class="donate-amount-grid fade-up">
           <button
             type="button"
-            class="amount-btn active"
+            class="amount-btn"
             data-currency="KES"
             onclick="switchCurrency(this, 'KES')"
           >
@@ -102,40 +111,12 @@
           </button>
           <button
             type="button"
-            class="amount-btn"
+            class="amount-btn active"
             data-currency="EUR"
             onclick="switchCurrency(this, 'EUR')"
           >
             EUR (€)
           </button>
-        </div>
-
-        <div class="impact-stats-grid">
-          <div class="impact-stat-card fade-up">
-            <i class="fa fa-book value-icon" aria-hidden="true"></i>
-            <h3>KSh 500</h3>
-            <p>Covers school supplies for one child for a week</p>
-          </div>
-
-          <div class="impact-stat-card fade-up">
-            <i class="fa fa-cutlery value-icon" aria-hidden="true"></i>
-            <h3>KSh 1,000</h3>
-            <p>Feeds a child at the library for a full week</p>
-          </div>
-
-          <div class="impact-stat-card fade-up">
-            <i class="fa fa-trophy value-icon" aria-hidden="true"></i>
-            <h3>KSh 5,000</h3>
-            <p>Helps send a Boardlords player to nationals</p>
-          </div>
-        </div>
-      </section>
-
-      <!------- DONATE FORM ------->
-      <section class="donate-form-section">
-        <div class="contact-form-heading fade-up">
-          <span class="section-eyebrow">Make A Donation</span>
-          <h2>Choose An Amount</h2>
         </div>
 
         <!------- CURRENCY TOGGLE ------->
@@ -146,7 +127,7 @@
             data-tier="1"
             onclick="selectAmount(this)"
           >
-            KSh 500
+            €7
           </button>
           <button
             type="button"
@@ -154,7 +135,7 @@
             data-tier="2"
             onclick="selectAmount(this)"
           >
-            KSh 1,000
+            €20
           </button>
           <button
             type="button"
@@ -162,7 +143,7 @@
             data-tier="3"
             onclick="selectAmount(this)"
           >
-            KSh 5,000
+            €50
           </button>
           <button
             type="button"
@@ -182,7 +163,7 @@
           <input
             type="number"
             id="customAmountInput"
-            placeholder="Enter amount (KSh)"
+            placeholder="Enter amount (€)"
             min="1"
           />
         </div>
@@ -206,46 +187,6 @@
           </div>
         </div>
       </section>
-
-      <!------- SPONSER A CHILD ------->
-      <section class="sponser-section">
-        <div class="sponser-card fade-up">
-          <div class="sponser-text">
-            <span class="section-eyebrow">Give Monthly</span>
-            <h2>Sponsor A Child</h2>
-            <p>
-              Become a monthly sponsor and give one child consistent support —
-              school supplies, meals at the library, and mentorship all year
-              round. Become a monthly sponsor and give one child consistent
-              support — school supplies, meals at the library, and mentorship
-              all year round.
-            </p>
-            <a href="https://wa.me/254795063917" class="hero-btn cta-btn"
-              >Become A Sponsor</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!------- Testimonial Section ------->
-      <!-- <section class="testimonial-section">
-        <i class="fa fa-quote-left" aria-hidden="true"></i>
-        <p class="testimonial-quote fade-up">
-          I didn't just learn to read in this library — I learned to think
-          ahead, on the chessboard and in life. Now I get to open that same door
-          for the next child.
-        </p>
-        <img
-          src="images/david-oduor.jpg"
-          alt="David Oduor"
-          class="testimonial-photo"
-        />
-
-        <p class="testimonial-author fade-up">
-          David Oduor — Founder & Programs Lead, once a student at Mashimoni
-          School of Hope
-        </p>
-      </section> -->
 
       <!---------Footer Section------->
       <section class="footer">

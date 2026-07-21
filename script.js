@@ -1,10 +1,10 @@
 const currencyConfig = {
   KES: { symbol: "KSh", amounts: [500, 1000, 5000] },
-  USD: { symbol: "$", amounts: [5, 10, 40] },
-  EUR: { symbol: "€", amounts: [5, 10, 35] },
+  USD: { symbol: "$", amounts: [7, 20, 50] },
+  EUR: { symbol: "€", amounts: [7, 20, 50] },
 };
 
-let activeCurrency = "KES";
+let activeCurrency = "EUR";
 let activeTier = null;
 
 // Toggle the navigation menu
